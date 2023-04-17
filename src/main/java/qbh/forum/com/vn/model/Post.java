@@ -69,4 +69,16 @@ public class Post implements Serializable {
     public void setStatus(int status) {
         this.status = status;
     }
+
+    @Override
+    public String toString() {
+        return "Post{" +
+                "id=" + id +
+                ", img='" + img + '\'' +
+                ", content='" + content + '\'' +
+                ", idA=" + idA +
+                ", created_at='" + created_at + '\'' +
+                ", status=" + status +
+                '}';
+    }
 }

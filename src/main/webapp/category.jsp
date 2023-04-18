@@ -170,7 +170,7 @@
                             </div>
                         </div>
                         <div class="status-field">
-                            <a href="single.jsp">
+                            <a href="single.jsp?postId=1">
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis dolores praesentium
                                     dicta
                                     laborum nihil accusantium odit laboriosam, sed sit autem!

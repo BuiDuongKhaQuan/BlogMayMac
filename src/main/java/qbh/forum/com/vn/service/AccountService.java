@@ -41,9 +41,9 @@ public class AccountService {
 
     }
 
-    public static Account getAccountById(String aid) {
+    public static Account getAccountById(int aid) {
         return JDBiConnector.me().withHandle(h ->
-                h.createQuery("SELECT * FROM account where idA =?")
+                h.createQuery("SELECT * FROM account where id =?")
                         .bind(0, aid)
                         .mapToBean(Account.class)
                         .stream()

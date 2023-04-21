@@ -56,9 +56,9 @@ public class PostController extends HttpServlet {
                         "                                </div>\n" +
                         "                            </div>\n" +
                         "                            <div class=\"status-field\"  style=\"margin-bottom: 20px;\">\n" +
-                        "                                <a href=\"single.jsp?postId=" + post.getId() + "\" style=\"text-decoration: none;color: #6a6a6a!important;\">\n" +
+                        "                                <a style=\"text-decoration: none;color: #6a6a6a!important;\">\n" +
                         "                                    <p>" + first200Chars + "\n" +
-                        "                                        <a href=\"#\">#Xem thêm</a></p>\n" +
+                        "                                        <a href=\"single.jsp?postId=" + post.getId() +"\">#Xem thêm</a></p>\n" +
                         "                                </a>\n" +
                         "                                <a href=\"single.jsp?postId=" + post.getId() + "\">\n" +
                         "                                    <img src=\"" + post.getImg() + "\" alt=\"Ảnh bài đăng\">\n" +

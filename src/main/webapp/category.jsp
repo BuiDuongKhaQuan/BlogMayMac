@@ -209,9 +209,9 @@
                                 </div>
                             </div>
                             <div class="status-field" style="margin-bottom: 20px;">
-                                <a href="single.jsp?postId=<%=post.getId()%>" style="text-decoration: none; color: #6a6a6a!important;">
+                                <a style="text-decoration: none; color: #6a6a6a!important;">
                                     <p><%=first200Chars%>
-                                        <a href="#"> Xem thêm</a></p>
+                                        <a href="single.jsp?postId=<%=post.getId()%>"> Xem thêm</a></p>
                                 </a>
                                 <a href="single.jsp?postId=<%=post.getId()%>">
                                     <img src="<%=post.getImg()%>" alt="Ảnh bài đăng">
@@ -637,6 +637,9 @@
         xhr.send();
     }
 
+    function single(id) {
+        window.location.href = "single.jsp?postId=" + id;
+    }
 </script>
 </body>
 </html>

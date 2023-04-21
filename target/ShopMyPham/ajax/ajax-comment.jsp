@@ -9,7 +9,9 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%Comment cmt = (Comment) request.getAttribute("cmt");
-    Account userCmt = AccountService.getAccountById(cmt.getUserId());%>
+    Account user = (Account) request.getSession().getAttribute("acc");
+    Account userCmt = AccountService.getAccountById(cmt.getUserId());
+%>
 <div class="item item-<%=cmt.getId()%>">
     <div class="user">
         <figure>
@@ -25,8 +27,11 @@
             </div>
             <footer id="form-reply">
                 <a id="rp-<%=cmt.getId()%>" class="reply">Trả lời</a>
+                <%if(user.getId()== cmt.getUserId()){%>
                 <a href="#" data-toggle="modal" data-target="#confirm-modal" class="remove"
                    id="delete<%=cmt.getId()%>">Xóa</a>
+
+                <% }%>
                 <div class="input-group mb-3 input-reply-<%=cmt.getId()%>"
                      style="display: none">
                     <input type="text" id="desc-reply-<%=cmt.getId()%>" class="form-control"

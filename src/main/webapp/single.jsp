@@ -356,8 +356,11 @@
                                     </div>
                                     <footer id="form-reply">
                                         <a id="rp-<%=cmt.getId()%>" class="reply">Trả lời</a>
+                                        <%if(user.getId()== cmt.getUserId()){%>
                                         <a href="#" data-toggle="modal" data-target="#confirm-modal" class="remove"
                                            id="delete<%=cmt.getId()%>">Xóa</a>
+
+                                        <% }%>
                                         <div class="input-group mb-3 input-reply-<%=cmt.getId()%>"
                                              style="display: none">
                                             <input type="text" id="desc-reply-<%=cmt.getId()%>" class="form-control"
@@ -390,7 +393,12 @@
                                                 <%=reply.getDescription()%>
                                             </div>
                                             <footer>
-                                                <a href="#" data-toggle="modal" data-target="#confirm-modal" id="delete<%=cmt.getId()%>">Xóa</a>
+                                                <%if(user.getId()== cmt.getUserId()){%>
+                                                <%--                                                <a href="#" data-toggle="modal" data-target="#confirm-modal" class="remove"--%>
+                                                <%--                                                   id="delete<%=cmt.getId()%>">Xóa</a>--%>
+                                                <a href="#" data-toggle="modal" data-target="#confirm-modal" id="delete<%=cmt.getId()%>" class="remove">Xóa</a>
+
+                                                <% }%>
                                             </footer>
                                         </div>
                                     </div>

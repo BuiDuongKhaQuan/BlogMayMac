@@ -9,8 +9,5 @@
         <module name="Forum" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="DoAnCNPM" target="1.8" />
-    </bytecodeTargetLevel>
   </component>
 </project>

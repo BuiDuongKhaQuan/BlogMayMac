@@ -1,4 +1,10 @@
 <%@ page import="qbh.forum.com.vn.model.Account" %>
+<%@ page import="java.util.Map" %>
+<%@ page import="java.util.List" %>
+<%@ page import="qbh.forum.com.vn.model.Post" %>
+<%@ page import="qbh.forum.com.vn.service.AccountService" %>
+<%@ page import="qbh.forum.com.vn.service.PostService" %>
+<%@ page import="java.util.Collections" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html><html>
 <head>
@@ -118,24 +124,48 @@
                 <!--  -->
                 <div class="content-area">
 
-                    <% Account account = (Account) request.getSession().getAttribute("acc");%>
+                    <% Account account = (Account) request.getSession().getAttribute("acc");
+                        if (account != null) {%>
                     <div class="write-post-container">
-                        <form action="post">
-                            <div class="user-profile">
-                                <img src="images copy/profile-pic.png" alt="">
-                                <div>
-                                    <p><%=account.getName()%>
-                                    </p>
-                                </div>
+                        <div class="user-profile">
+                            <img src="images copy/profile-pic.png" alt="">
+                            <div>
+                                <p><%=account.getName()%>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="post-upload-textarea">
+                                <textarea name="content" placeholder="Bạn đang nghĩ gì, <%=account.getName()%>?"
+                                          id="content" cols="30"
+                                          rows="3"></textarea>
+                            <% Map<String, String> myImg = (Map<String, String>) session.getAttribute("img");
+                                String img = "";
+                                String path = "";
+                                if (myImg != null) {
+                                    for (Map.Entry<String, String> entry : myImg.entrySet()) {
+                                        img = "data:image/jpeg;base64," + entry.getValue();
+                                        path = entry.getKey();
+                                    }%>
+                            <div style="border-bottom: 1px solid #ccc;">
+                                <img src="<%=img%>" style="margin: 10px 0px; width: 30%;">
+                                <input type="hidden" id="img" value="<%=path%>">
+                            </div>
+                            <%}%>
+                            <div class="add-post-links">
+                                <a href="javascript:void(0);" onclick="show()"><img src="images copy/photo.png"
+                                                                                    alt="">Ảnh</a>
+                                <a href="javascript:void(0);" onclick="post(<%=account.getId()%>)"><img
+                                        src="images copy/upload.png" alt="">Đăng bài</a>
                             </div>
                             <div id="show" class="promotion">
                                 <div class="promotion-box">
-                                    <label class="title">Cập nhật ảnh đại diện</label>
+                                    <label class="title">Tải ảnh của bạn lên</label>
                                     <img src="user-template/img/icon/close.png" width="22px"
                                          class="zmdi zmdi-close icon-close"
                                          onclick="closeNew()">
                                     <div class="promotion-content">
-                                        <form action="UploadFileServlet" method="post"
+                                        <form action="UploadImg" method="post"
                                               enctype="multipart/form-data">
                                             <input type="file" name="file" size="60" class="dropify"
                                                    data-min-width="400"/>
@@ -144,155 +174,62 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="post-upload-textarea">
-                                <textarea name="content" placeholder="Bạn đang nghĩ gì, <%=account.getName()%>?"
-                                          id="content" cols="30"
-                                          rows="3"></textarea>
-                                <div class="add-post-links">
-                                    <a href="javascript:void(0);"><img src="images copy/photo.png" alt="">Ảnh</a>
-                                    <a href="javascript:void(0);"><img src="images copy/upload.png" alt="">Đăng bài</a>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-
-                    <div class="status-field-container write-post-container">
-                        <div class="user-profile-box">
-                            <div class="user-profile">
-                                <img src="images copy/profile-pic.png" alt="">
-                                <div>
-                                    <p> Alex Carry</p>
-                                    <small>August 13 1999, 09.18 pm</small>
-                                </div>
-                            </div>
-                            <div>
-                                <a href="#"><i class="fas fa-ellipsis-v"></i></a>
-                            </div>
-                        </div>
-                        <div class="status-field">
-                            <a href="single.jsp?postId=1">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis dolores praesentium
-                                    dicta
-                                    laborum nihil accusantium odit laboriosam, sed sit autem!
-                                    <a href="#">#This_Post_is_Better!!!!</a></p>
-                            </a>
-                            <a href="single.jsp">
-                                <img src="images copy/feed-image-1.png" alt="">
-                            </a>
-
-                        </div>
-                        <div class="post-reaction">
-                            <div class="activity-icons">
-                                <div><img src="images copy/like-blue.png" alt="">120</div>
-                                <div><img src="images copy/comments.png" alt="">52</div>
-                                <div><img src="images copy/share.png" alt="">35</div>
-                            </div>
-                            <div class="post-profile-picture">
-                                <img src="images copy/profile-pic.png " alt=""> <i class=" fas fa-caret-down"></i>
-                            </div>
                         </div>
                     </div>
-                    <div class="status-field-container write-post-container">
-                        <div class="user-profile-box">
-                            <div class="user-profile">
-                                <img src="images copy/profile-pic.png" alt="">
-                                <div>
-                                    <p> Alex Carry</p>
-                                    <small>August 13 1999, 09.18 pm</small>
-                                </div>
-                            </div>
-                            <div>
-                                <a href="#"><i class="fas fa-ellipsis-v"></i></a>
-                            </div>
-                        </div>
-                        <div class="status-field">
-                            <a href="single.jsp">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis dolores praesentium
-                                    dicta
-                                    laborum nihil accusantium odit laboriosam, sed sit autem! <a
-                                            href="#">#This_Post_is_Bigger!!!!</a></p></a>
-                            <a href="single.jsp">
-                                <img src="images copy/feed-image-2.png" alt=""></a>
-
-                        </div>
-                        <div class="post-reaction">
-                            <div class="activity-icons">
-                                <div><img src="images copy/like-blue.png" alt="">120</div>
-                                <div><img src="images copy/comments.png" alt="">52</div>
-                                <div><img src="images copy/share.png" alt="">35</div>
-                            </div>
-                            <div class="post-profile-picture">
-                                <img src="images copy/profile-pic.png " alt=""> <i class=" fas fa-caret-down"></i>
-                            </div>
-                        </div>
+                    <%} else {%>
+                    <div class="write-post-container">
+                        Bạn hãy đăng nhập để sử dụng chức năng đăng bài! <a href="login.jsp">Đăng nhập</a>
                     </div>
-                    <div class="status-field-container write-post-container">
-                        <div class="user-profile-box">
-                            <div class="user-profile">
-                                <img src="images copy/profile-pic.png" alt="">
+                    <%}%>
+                    <div id="list_post">
+                        <% List<Post> posts = PostService.getAll();
+                            Collections.reverse(posts);
+                            for (Post post : posts) {
+                                String str = post.getContent();
+                                String first200Chars;
+                                if (str.length() <= 200) {
+                                    first200Chars = str;
+                                } else {
+                                    first200Chars = str.substring(0, 200);
+                                }
+                        %>
+                        <div class="status-field-container write-post-container">
+                            <div class="user-profile-box">
+                                <div class="user-profile">
+                                    <img src="images copy/profile-pic.png" alt="">
+                                    <div>
+                                        <p><%=AccountService.getAccountById(post.getIdA()).getName()%>
+                                        </p>
+                                        <small><%=post.getCreated_at()%>
+                                        </small>
+                                    </div>
+                                </div>
                                 <div>
-                                    <p> Alex Carry</p>
-                                    <small>August 13 1999, 09.18 pm</small>
+                                    <a href="#"><i class="fas fa-ellipsis-v"></i></a>
                                 </div>
                             </div>
-                            <div>
-                                <a href="#"><i class="fas fa-ellipsis-v"></i></a>
-                            </div>
-                        </div>
-                        <div class="status-field">
-                            <a href="single.jsp">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis dolores praesentium
-                                    dicta
-                                    laborum nihil accusantium odit laboriosam, sed sit autem! <a
-                                            href="#">#This_Post_is_faster!!!!</a></p></a>
-                            <a href="single.jsp">
-                                <img src="images copy/feed-image-3.png" alt=""></a>
+                            <div class="status-field" style="margin-bottom: 20px;">
+                                <a href="single.jsp?postId=<%=post.getId()%>" style="text-decoration: none; color: #6a6a6a!important;">
+                                    <p><%=first200Chars%>
+                                        <a href="#"> Xem thêm</a></p>
+                                </a>
+                                <a href="single.jsp?postId=<%=post.getId()%>">
+                                    <img src="<%=post.getImg()%>" alt="Ảnh bài đăng">
+                                </a>
 
-                        </div>
-                        <div class="post-reaction">
-                            <div class="activity-icons">
-                                <div><img src="images copy/like-blue.png" alt="">120</div>
-                                <div><img src="images copy/comments.png" alt="">52</div>
-                                <div><img src="images copy/share.png" alt="">35</div>
                             </div>
-                            <div class="post-profile-picture">
-                                <img src="images copy/profile-pic.png " alt=""> <i class=" fas fa-caret-down"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="status-field-container write-post-container">
-                        <div class="user-profile-box">
-                            <div class="user-profile">
-                                <img src="images copy/profile-pic.png" alt="">
-                                <div>
-                                    <p> Alex Carry</p>
-                                    <small>August 13 1999, 09.18 pm</small>
+                            <div class="post-reaction">
+                                <div class="activity-icons">
+                                    <div><img src="images copy/like-blue.png" alt="">120</div>
+                                    <div><img src="images copy/comments.png" alt="">52</div>
+                                    <div><img src="images copy/share.png" alt="">35</div>
+                                </div>
+                                <div class="post-profile-picture">
+                                    <img src="images copy/profile-pic.png " alt=""> <i class=" fas fa-caret-down"></i>
                                 </div>
                             </div>
-                            <div>
-                                <a href="#"><i class="fas fa-ellipsis-v"></i></a>
-                            </div>
                         </div>
-                        <div class="status-field">
-                            <a href="single.jsp">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis dolores praesentium
-                                    dicta
-                                    laborum nihil accusantium odit laboriosam, sed sit autem! <a
-                                            href="#">#This_Post_is_perfect!!!!</a></p></a>
-                            <a href="single.jsp">
-                                <img src="images copy/feed-image-4.png" alt=""></a>
-
-                        </div>
-                        <div class="post-reaction">
-                            <div class="activity-icons">
-                                <div><img src="images copy/like-blue.png" alt="">120</div>
-                                <div><img src="images copy/comments.png" alt="">52</div>
-                                <div><img src="images copy/share.png" alt="">35</div>
-                            </div>
-                            <div class="post-profile-picture">
-                                <img src="images copy/profile-pic.png " alt=""> <i class=" fas fa-caret-down"></i>
-                            </div>
-                        </div>
+                        <%}%>
                     </div>
                     <button type="button" class="btn-LoadMore" onclick="LoadMoreToggle()">Load More</button>
                 </div>
@@ -644,7 +581,7 @@
 <script src="js/jquery.js"></script>
 <script src="js/jquery.migrate.js"></script>
 <script src="scripts/bootstrap/bootstrap.min.js"></script>
-<script>var $target_end=$(".best-of-the-week");</script>
+<script>var $target_end = $(".best-of-the-week");</script>
 <script src="scripts/jquery-number/jquery.number.min.js"></script>
 <script src="scripts/owlcarousel/dist/owl.carousel.min.js"></script>
 <script src="scripts/magnific-popup/dist/jquery.magnific-popup.min.js"></script>
@@ -655,6 +592,51 @@
 <script src="js/e-magz.js"></script>
 <script src="dropify/js/dropify.min.js">
 </script>
+<script>
+    $('.dropify').dropify();
 
+    function show() {
+        var box = document.getElementById('show');
+        box.style.display = 'flex';
+    }
+
+    function closeNew() {
+
+        var box = document.getElementById('show');
+        box.style.display = 'none';
+
+    }
+
+    function post(idA) {
+        var content = document.getElementById("content").value;
+        var img = document.getElementById("img").value;
+
+
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", "PostController?idA=" + idA + "&img=" + encodeURIComponent(img) + "&command=post&content=" + encodeURIComponent(content), true);
+        xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+                alert("Đăng bài thành công, chờ duyệt!");
+                load();
+            }
+        };
+        xhr.send();
+
+    }
+
+    function load() {
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", "PostController?command=load", true);
+        xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+                document.getElementById("list_post").innerHTML = this.responseText;
+            }
+        };
+        xhr.send();
+    }
+
+</script>
 </body>
 </html>

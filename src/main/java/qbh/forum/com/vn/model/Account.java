@@ -3,14 +3,14 @@ package qbh.forum.com.vn.model;
 import java.io.Serializable;
 
 public class Account implements Serializable {
-    int id;
-    String user;
-    String pass;
-    String name;
-    String email;
-    String id_fb;
+    private int id;
+    private String user;
+    private String pass;
+    private String name;
+    private String email;
+    private String id_fb;
 
-    int role, status;
+    private int role, status;
 
     public Account() {
     }

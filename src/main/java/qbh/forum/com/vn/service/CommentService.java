@@ -1,7 +1,6 @@
 package qbh.forum.com.vn.service;
 
 import qbh.forum.com.vn.db.JDBiConnector;
-import qbh.forum.com.vn.model.Account;
 import qbh.forum.com.vn.model.Comment;
 
 import java.util.List;
@@ -32,7 +31,7 @@ public class CommentService {
     }
 
     public int insertCmt(int userId, String postId, String description){
-        String id = taoIDComment();
+        String id = createIdComment();
         JDBiConnector.me().withHandle(h ->
                 h.createUpdate("insert into comment(id,userId, postId,description,`status`) values (?,?,?,?,1)")
                         .bind(0,id)
@@ -45,7 +44,7 @@ public class CommentService {
     }
 
     public int insertReply(int userId, String postId, String reply, int parentId){
-        String id = taoIDComment();
+        String id = createIdComment();
         JDBiConnector.me().withHandle(h ->
                 h.createUpdate("insert into comment(id,userId, postId,description,`status`,parentId) values (?,?,?,?,1,?)")
                         .bind(0,id)
@@ -78,7 +77,7 @@ public class CommentService {
         });
         return cmt;
     }
-    public static String taoIDComment() {
+    public static String createIdComment() {
         String numbers = "0123456789";
         StringBuilder stringBuilder = new StringBuilder("");
         Random rd = new Random();
@@ -93,7 +92,7 @@ public class CommentService {
                         .mapTo(String.class)
                         .stream()
                         .collect(Collectors.toList()));
-        if (listId.contains(stringBuilder.toString())) return taoIDComment();
+        if (listId.contains(stringBuilder.toString())) return createIdComment();
         else return stringBuilder.toString();
     }
     public static void main(String[] args) {

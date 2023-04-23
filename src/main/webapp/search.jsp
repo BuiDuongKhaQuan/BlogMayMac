@@ -1,6 +1,18 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%--<%@ page import="qbh.forum.com.vn.controller.NewsControll" %>--%>
+<%@ page import="qbh.forum.com.vn.model.News" %>
+<%@ page import="java.util.List" %>
+<%@ page import="qbh.forum.com.vn.service.NewsService" %>
+<%@ page import="java.util.ArrayList" %>
+<%@ page import="java.util.Set" %>
+<%@ page import="java.util.HashSet" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib prefix="for" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
-<html>
+  <html>
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -119,26 +131,44 @@
 							Search results for keyword "hello" found in 5,200 posts.
 						</div>
 						<div class="row">
+<%--							<% List<News> a= NewsService.getData();--%>
+<%--								for(News u:a){%>--%>
+	<%
+		List<News> newsList = NewsService.getData();
+
+// create a set to store the IDs of the articles that have been displayed
+
+		for (News u : newsList) {
+	%>
+
+<%--							<c:forEach items="${newsList}" var="u">--%>
 							<article class="col-md-12 article-list">
 								<div class="inner">
 									<figure>
 										<a href="single.jsp">
-											<img src="images/news/img11.jpg">
+<%--											<img src="images/news/img11.jpg">--%>
+											<img src='img_new\<c:out value="<%=u.getImage()%>"/>' alt="<c:out value="<%=u.getImage() %>"/>">
+<%--								<img src='img_new\<c:out value="${p.codecate}"/>/<c:out value="${p.image}"/>'--%>
+<%--								  alt="<c:out value="${p.image}"/>">--%>
 										</a>
 									</figure>
 									<div class="details">
 										<div class="detail">
 											<div class="category">
-												<a href="#">Film</a>
+<%--												<a href="#">Film</a>--%>
+													<a href="#"><%=u.getCategory()%></a>
 											</div>
-											<time>December 19, 2016</time>
+<%--											<time>December 19, 2016</time>--%>
+											<time><%=u.getTime()%></time>
 										</div>
-										<h1><a href="single.jsp">Donec consequat arcu at ultrices sodales quam erat aliquet diam</a></h1>
-										<p>
-										Donec consequat, arcu at ultrices sodales, quam erat aliquet diam, sit amet interdum libero nunc accumsan nisi.
-										</p>
+										<h1><a href="single.jsp"><%=u.getTitle()%></a></h1>
+<%--										<h1><a href="single.jsp">Donec consequat arcu at ultrices sodales quam erat aliquet diam</a></h1>--%>
+<%--										<p>--%>
+<%--										Donec consequat, arcu at ultrices sodales, quam erat aliquet diam, sit amet interdum libero nunc accumsan nisi.--%>
+<%--										</p>--%>
+										<p><%=u.getContent()%></p>
 										<footer>
-											<a href="#" class="love"><i class="ion-android-favorite-outline"></i> <div>273</div></a>
+<%--											<a href="#" class="love"><i class="ion-android-favorite-outline"></i> <div>273</div></a>--%>
 											<a class="btn btn-primary more" href="single.jsp">
 												<div>More</div>
 												<div><i class="ion-ios-arrow-thin-right"></i></div>
@@ -146,108 +176,26 @@
 										</footer>
 									</div>
 								</div>
+
 							</article>
-							<article class="col-md-12 article-list">
-								<div class="inner">
-									<div class="badge">
-										Sponsored
-									</div>
-									<figure>
-										<a href="single.jsp">
-											<img src="images/news/img02.jpg">
-										</a>
-									</figure>
-									<div class="details">
-										<div class="detail">
-											<div class="category">
-												<a href="#">Travel</a>
-											</div>
-											<time>December 18, 2016</time>
-										</div>
-										<h1><a href="single.jsp">Maecenas accumsan tortor ut velit pharetra mollis</a></h1>
-										<p>
-											Maecenas accumsan tortor ut velit pharetra mollis. Proin eu nisl et arcu iaculis placerat sollicitudin ut est. In fringilla dui.
-										</p>
-										<footer>
-											<a href="#" class="love"><i class="ion-android-favorite-outline"></i> <div>4209</div></a>
-											<a class="btn btn-primary more" href="single.jsp">
-												<div>More</div>
-												<div><i class="ion-ios-arrow-thin-right"></i></div>
-											</a>
-										</footer>
-									</div>
-								</div>
-							</article>
-							<article class="col-md-12 article-list">
-								<div class="inner">
-									<figure>
-										<a href="single.jsp">
-											<img src="images/news/img03.jpg">
-										</a>
-									</figure>
-									<div class="details">
-										<div class="detail">
-											<div class="category">
-											<a href="#">Travel</a>
-											</div>
-											<time>December 16, 2016</time>
-										</div>
-										<h1><a href="single.jsp">Nulla facilisis odio quis gravida vestibulum Proin venenatis pellentesque arcu</a></h1>
-										<p>
-											Nulla facilisis odio quis gravida vestibulum. Proin venenatis pellentesque arcu, ut mattis nulla placerat et.
-										</p>
-										<footer>
-											<a href="#" class="love active"><i class="ion-android-favorite"></i> <div>302</div></a>
-											<a class="btn btn-primary more" href="single.jsp">
-												<div>More</div>
-												<div><i class="ion-ios-arrow-thin-right"></i></div>
-											</a>
-										</footer>
-									</div>
-								</div>
-							</article>
-							<article class="col-md-12 article-list">
-								<div class="inner">
-									<figure>
-										<a href="single.jsp">
-											<img src="images/news/img09.jpg">
-										</a>
-									</figure>
-									<div class="details">
-										<div class="detail">
-											<div class="category">
-												<a href="#">Healthy</a>
-											</div>
-											<time>December 16, 2016</time>
-										</div>
-										<h1><a href="single.jsp">Maecenas blandit ultricies lorem id tempor enim pulvinar at</a></h1>
-										<p>
-											Maecenas blandit ultricies lorem, id tempor enim pulvinar at. Curabitur sit amet tortor eu ipsum lacinia malesuada. Etiam sed vulputate magna.
-										</p>
-										<footer>
-											<a href="#" class="love"><i class="ion-android-favorite-outline"></i> <div>783</div></a>
-											<a class="btn btn-primary more" href="single.jsp">
-												<div>More</div>
-												<div><i class="ion-ios-arrow-thin-right"></i></div>
-											</a>
-										</footer>
-									</div>
-								</div>
-							</article>
-		          <div class="col-md-12 text-center">
-		            <ul class="pagination">
-		              <li class="prev"><a href="#"><i class="ion-ios-arrow-left"></i></a></li>
-		              <li class="active"><a href="#">1</a></li>
-		              <li><a href="#">2</a></li>
-		              <li><a href="#">3</a></li>
-		              <li><a href="#">...</a></li>
-		              <li><a href="#">97</a></li>
-		              <li class="next"><a href="#"><i class="ion-ios-arrow-right"></i></a></li>
-		            </ul>
-		            <div class="pagination-help-text">
-		            	Showing 8 results of 776 &mdash; Page 1
-		            </div>
-		          </div>
+
+							<%}%>
+						</div>
+
+<%--						</c:forEach>--%>
+						<div class="col-md-12 text-center">
+							<ul class="pagination">
+								<li class="prev"><a href="#"><i class="ion-ios-arrow-left"></i></a></li>
+								<li class="active"><a href="#">1</a></li>
+								<li><a href="#">2</a></li>
+								<li><a href="#">3</a></li>
+								<li><a href="#">...</a></li>
+								<li><a href="#">97</a></li>
+								<li class="next"><a href="#"><i class="ion-ios-arrow-right"></i></a></li>
+							</ul>
+							<div class="pagination-help-text">
+								Showing 8 results of 776 &mdash; Page 1
+							</div>
 						</div>
 					</div>
 				</div>
@@ -456,6 +404,7 @@
 								Made with <i class="ion-heart"></i> by <a href="http://kodinger.com">Group12</a>
 							</div>
 						</div>
+
 					</div>
 				</div>
 			</div>
@@ -482,4 +431,4 @@
 		});</script>
 		<script src="js/e-magz.js"></script>
 	</body>
-</html>
+ </html>

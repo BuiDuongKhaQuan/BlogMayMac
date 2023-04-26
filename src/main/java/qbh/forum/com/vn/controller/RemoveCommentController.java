@@ -15,7 +15,15 @@ public class RemoveCommentController extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        /*
+         * Usecase Comment
+         * 20. lấy mã bình luận
+         * */
         String id = request.getParameter("id");
+        /*
+         * Usecase Comment
+         * 21. gửi mã cho service
+         * */
         new CommentService().RemoveCmt(Integer.parseInt(id));
     }
 }

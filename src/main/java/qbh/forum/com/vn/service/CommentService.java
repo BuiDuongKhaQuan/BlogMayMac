@@ -19,6 +19,17 @@ public class CommentService {
         return list;
     }
 
+    public List<Comment> getListAllCmtByPost(int postId) {
+        List<Comment> list = JDBiConnector.me().withHandle(h ->
+                h.createQuery("select * from `comment` where `status`=1 and postId=?")
+                        .bind(0, postId)
+                        .mapToBean(Comment.class)
+                        .stream()
+                        .collect(Collectors.toList())
+        );
+        return list;
+    }
+
     public List<Comment> getListReplyCmtById(int parentId) {
         List<Comment> list = JDBiConnector.me().withHandle(h ->
                 h.createQuery("select * from `comment` where `status`=1 and parentId =?")
@@ -30,6 +41,10 @@ public class CommentService {
         return list;
     }
 
+    /*
+    * Usecase Comment
+    * 10. lưu vào database
+    * */
     public int insertCmt(int userId, String postId, String description){
         String id = createIdComment();
         JDBiConnector.me().withHandle(h ->
@@ -57,6 +72,10 @@ public class CommentService {
         return Integer.parseInt(id);
     }
 
+    /*
+    * Usecase Comment
+    * 22. gọi lệnh xóa dưới database
+    * */
     public void RemoveCmt(int id){
         JDBiConnector.me().withHandle(handle -> {
                     handle.createUpdate("DELETE FROM comment WHERE id = ? or parentId =?")
@@ -69,6 +88,10 @@ public class CommentService {
     }
 
 
+    /*
+    * Usecase Comment
+    * 11. lấy nội dung bình luận
+    * */
     public Comment getCmtById(int cmtId){
         Comment cmt = JDBiConnector.me().withHandle(handle -> {
             return handle.createQuery("select * from comment where id = ?")

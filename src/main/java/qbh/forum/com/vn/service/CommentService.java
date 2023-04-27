@@ -43,7 +43,7 @@ public class CommentService {
 
     /*
     * Usecase Comment
-    * 10. lưu vào database
+    * 10. lưu bình luận vào database
     * */
     public int insertCmt(int userId, String postId, String description){
         String id = createIdComment();
@@ -57,7 +57,10 @@ public class CommentService {
         );
         return Integer.parseInt(id);
     }
-
+    /*
+     * Usecase Comment
+     * 22. lưu trả lời vào database
+     * */
     public int insertReply(int userId, String postId, String reply, int parentId){
         String id = createIdComment();
         JDBiConnector.me().withHandle(h ->
@@ -72,10 +75,7 @@ public class CommentService {
         return Integer.parseInt(id);
     }
 
-    /*
-    * Usecase Comment
-    * 22. gọi lệnh xóa dưới database
-    * */
+
     public void RemoveCmt(int id){
         JDBiConnector.me().withHandle(handle -> {
                     handle.createUpdate("DELETE FROM comment WHERE id = ? or parentId =?")
@@ -91,6 +91,7 @@ public class CommentService {
     /*
     * Usecase Comment
     * 11. lấy nội dung bình luận
+    * 23. lấy nội dung trả lời
     * */
     public Comment getCmtById(int cmtId){
         Comment cmt = JDBiConnector.me().withHandle(handle -> {

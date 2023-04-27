@@ -37,7 +37,7 @@ public class UploadImg extends HttpServlet {
         Map<String, String> map = new HashMap<>();
         map.put(parthImg, base64Image);
         session.setAttribute("img", map);
-        response.sendRedirect("category.jsp");
+        response.sendRedirect("post.jsp");
     }
 
     /**

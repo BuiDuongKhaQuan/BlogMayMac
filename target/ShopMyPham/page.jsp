@@ -138,48 +138,48 @@
 								<article class="article-mini">
 									<div class="inner">
 										<figure>
-											<a href="post-detail.jsp">
+											<a href="single.jsp">
 												<img src="images/news/img12.jpg" alt="Sample Article">
 											</a>
 										</figure>
 										<div class="padding">
-											<h1><a href="post-detail.jsp">Donec consequat lorem quis augue pharetra</a></h1>
+											<h1><a href="single.jsp">Donec consequat lorem quis augue pharetra</a></h1>
 										</div>
 									</div>
 								</article>
 								<article class="article-mini">
 									<div class="inner">
 										<figure>
-											<a href="post-detail.jsp">
+											<a href="single.jsp">
 												<img src="images/news/img14.jpg" alt="Sample Article">
 											</a>
 										</figure>
 										<div class="padding">
-											<h1><a href="post-detail.jsp">eu dapibus risus aliquam etiam ut venenatis</a></h1>
+											<h1><a href="single.jsp">eu dapibus risus aliquam etiam ut venenatis</a></h1>
 										</div>
 									</div>
 								</article>
 								<article class="article-mini">
 									<div class="inner">
 										<figure>
-											<a href="post-detail.jsp">
+											<a href="single.jsp">
 												<img src="images/news/img15.jpg" alt="Sample Article">
 											</a>
 										</figure>
 										<div class="padding">
-											<h1><a href="post-detail.jsp">Nulla facilisis odio quis gravida vestibulum </a></h1>
+											<h1><a href="single.jsp">Nulla facilisis odio quis gravida vestibulum </a></h1>
 										</div>
 									</div>
 								</article>
 								<article class="article-mini">
 									<div class="inner">
 										<figure>
-											<a href="post-detail.jsp">
+											<a href="single.jsp">
 												<img src="images/news/img16.jpg" alt="Sample Article">
 											</a>
 										</figure>
 										<div class="padding">
-											<h1><a href="post-detail.jsp">Proin venenatis pellentesque arcu vitae </a></h1>
+											<h1><a href="single.jsp">Proin venenatis pellentesque arcu vitae </a></h1>
 										</div>
 									</div>
 								</article>

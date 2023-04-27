@@ -345,6 +345,7 @@
                                         <%=cmt.getDescription()%>
                                     </div>
                                     <footer id="form-reply">
+<<<<<<< HEAD:src/main/webapp/post-detail.jsp
                                         <div class="media-body">
                                             <ul class="list-unstyled list-inline media-detail pull-right">
                                                 <%if (user.getId() == cmt.getUserId()) {%>
@@ -383,7 +384,57 @@
                                                     </button>
                                                 </div>
                                             </div>
+=======
+                                        <%--                                        <a id="rp-<%=cmt.getId()%>" class="reply">Trả lời</a>--%>
+                                        <%--                                        <a href="#" data-toggle="modal" data-target="#confirm-modal" class="remove"--%>
+                                        <%--                                           id="delete<%=cmt.getId()%>">Xóa</a>--%>
+                                        <%--                                        <div class="input-group mb-3 input-reply-<%=cmt.getId()%>"--%>
+                                        <%--                                             style="display: none">--%>
+                                        <%--                                            <input type="text" id="desc-reply-<%=cmt.getId()%>" class="form-control"--%>
+                                        <%--                                                   placeholder="Viết trả lời..." aria-label="Viết trả lời..."--%>
+                                        <%--                                                   aria-describedby="button-addon2">--%>
+                                        <%--                                            <button class="btn btn-primary btn-reply" type="button"--%>
+                                        <%--                                                    id="reply-<%=cmt.getId()%>">Trả lời--%>
+                                        <%--                                            </button>--%>
+                                        <%--                                        </div>--%>
+
+                                        <%--                                        <a id="rp-<%=cmt.getId()%>" class="reply">Trả lời</a>--%>
+                                        <%--                                        <a href="#" data-toggle="modal" data-target="#confirm-modal" class="remove"--%>
+                                        <%--                                           id="delete<%=cmt.getId()%>">Xóa</a>--%>
+                                        <div class="media-body">
+                                            <ul class="list-unstyled list-inline media-detail pull-right">
+                                                <li class=""><a href="#" data-toggle="modal"
+                                                                data-target="#confirm-modal" class="remove"
+                                                                id="delete<%=cmt.getId()%>">Xóa</a></li>
+                                                <li class=""><a id="rp-<%=cmt.getId()%>" class="reply">Trả lời</a></li>
+                                            </ul>
+                                            <%--                                        <div class="input-group mb-3 input-reply-<%=cmt.getId()%>"--%>
+                                            <%--                                             style="display: none">--%>
+                                            <%--                                            <input type="text" id="desc-reply-<%=cmt.getId()%>" class="form-control"--%>
+                                            <%--                                                   placeholder="Viết trả lời..." aria-label="Viết trả lời..."--%>
+                                            <%--                                                   aria-describedby="button-addon2">--%>
+                                            <%--                                            <button class="btn btn-primary btn-reply" type="button"--%>
+                                            <%--                                                    id="reply-<%=cmt.getId()%>">Trả lời--%>
+                                            <%--                                            </button>--%>
+                                            <%--                                        </div>--%>
+
+                                            <div class="input-group mb-3 input-reply-<%=cmt.getId()%>"
+                                                 style="display: none">
+                                                <input type="text" id="desc-reply-<%=cmt.getId()%>"
+                                                       class="form-control text"
+                                                       placeholder="Viết trả lời..." aria-label="Viết trả lời..."
+                                                       aria-describedby="button-addon2">
+                                                <div class="input-group-btn">
+                                                    <button class="btn btn-primary btn-reply" type="button"
+                                                            id="reply-<%=cmt.getId()%>"> Trả lời
+                                                    </button>
+                                                </div>
+                                            </div>
+
+
+>>>>>>> b072d3cd72e4e5f4b4e33fd802badf30fd0bbdae:src/main/webapp/single.jsp
                                         </div>
+
                                     </footer>
                                 </div>
                             </div>
@@ -407,6 +458,7 @@
                                                 <%=reply.getDescription()%>
                                             </div>
                                             <footer>
+<<<<<<< HEAD:src/main/webapp/post-detail.jsp
                                                 <div class="media-body">
                                                     <ul class="list-unstyled list-inline media-detail pull-right">
                                                         <%if (user.getId() == reply.getUserId()) {%>
@@ -417,6 +469,19 @@
                                                         <% }%>
                                                     </ul>
                                                 </div>
+=======
+                                                <%--                                                <a href="#" data-toggle="modal" data-target="#confirm-modal"--%>
+                                                <%--                                                   id="delete<%=cmt.getId()%>">Xóa</a>--%>
+                                                <div class="media-body">
+                                                    <ul class="list-unstyled list-inline media-detail pull-right">
+                                                        <li class=""><a href="#" data-toggle="modal"
+                                                                        data-target="#confirm-modal"
+                                                                        id="delete<%=cmt.getId()%>">Xóa</a></li>
+                                                        <%--                                                        <li class=""><a id="rp-<%=cmt.getId()%>" class="reply">Trả lời</a></li>--%>
+                                                    </ul>
+                                                </div>
+                                                <%--                                                <a href="#" data-toggle="modal" data-target="#confirm-modal" id="delete<%=cmt.getId()%>">Xóa</a>--%>
+>>>>>>> b072d3cd72e4e5f4b4e33fd802badf30fd0bbdae:src/main/webapp/single.jsp
                                             </footer>
                                         </div>
                                     </div>
@@ -696,10 +761,44 @@
 <script src="js/demo.js"></script>
 <script src="js/e-magz.js"></script>
 <script>
+<<<<<<< HEAD:src/main/webapp/post-detail.jsp
     /*
     * Usecase Comment
     * 16. hiển thị khung trả lời dưới bình luận đó
     * */
+=======
+    $(document).ready(function () {
+        deletecomment();
+        showreply()
+        reply()
+    })
+
+    function deletecomment() {
+        $(".remove").each(function () {
+            const id = $(this).attr("id").substring(6);
+            $(this).on("click", function (e) {
+                e.preventDefault();
+                $("button[type='button'].yes").on("click", function () {
+                    console.log(id)
+                    $.ajax({
+                        url: "/Forum_war/RemoveCommentController",
+                        type: "post",
+                        data: {
+                            id: id,
+                        },
+                        success: function (data) {
+                            $(".item-" + id).remove();
+                        }
+                    })
+                })
+
+            })
+        })
+    }
+</script>
+<script>
+
+>>>>>>> b072d3cd72e4e5f4b4e33fd802badf30fd0bbdae:src/main/webapp/single.jsp
     function showreply() {
         $(".reply").click(function () {
                 const id = this.id.substring(3);

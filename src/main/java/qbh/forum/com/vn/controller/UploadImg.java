@@ -22,28 +22,22 @@ public class UploadImg extends HttpServlet {
         String nameImg = "";
         for (Part part : request.getParts()) {
             String fileName = extractFileName(part);
-            // refines the fileName in case it is an absolute path
             fileName = new File(fileName).getName();
+            // 6. Tải và lưu ảnh vào taget
             part.write(this.getFolderUpload().getAbsolutePath() + File.separator + fileName);
             nameImg = fileName;
         }
         String parthImg = "images/blog/" + nameImg;
-
         byte[] imageData = Files.readAllBytes(Paths.get(this.getFolderUpload().getAbsolutePath() + File.separator + nameImg));
-
         String base64Image = javax.xml.bind.DatatypeConverter.printBase64Binary(imageData);
-
+        // 7. Lưu đường dẫn vào session
         HttpSession session = request.getSession();
         Map<String, String> map = new HashMap<>();
         map.put(parthImg, base64Image);
         session.setAttribute("img", map);
         response.sendRedirect("post.jsp");
     }
-
-    /**
-     * Extracts file name from HTTP header content-disposition
-     */
-
+    // dùng để trích xuất tên tệp tin từ phần này của yêu cầu HTTP
     private String extractFileName(Part part) {
         String contentDisp = part.getHeader("content-disposition");
         String[] items = contentDisp.split(";");
@@ -54,7 +48,6 @@ public class UploadImg extends HttpServlet {
         }
         return "";
     }
-
     public File getFolderUpload() {
         String avatarPath = "images/blog";
         ServletContext context = getServletContext();

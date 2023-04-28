@@ -19,12 +19,15 @@ public class PostController extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String command = request.getParameter("command");
         if (command.equals("post")) {
+            // Chức năng đăng bài
+            // 11. Xử lý dữ liệu nhận được.
             String img = request.getParameter("img");
             String content = request.getParameter("content");
             String idA = request.getParameter("idA");
             SimpleDateFormat dateFormat = new SimpleDateFormat("hh:mm:ss a dd/MM/yyyy");
             Date currentDate = new Date();
             String dateNow = dateFormat.format(currentDate);
+            // 12. Chuyển dữ liệu sau xử lý.
             PostService.post(idA, img, content, dateNow);
         }
         if (command.equals("load")) {

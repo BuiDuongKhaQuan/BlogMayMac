@@ -23,7 +23,8 @@ public class PostService {
                     .stream().collect(Collectors.toList());
         });
     }
-
+    // Chức năng đăng bài
+    // 13. Lưu vào database
     public static void post(String idA, String img, String content, String created_at) {
         JDBiConnector.me().withHandle(h ->
                 h.createUpdate("insert into posts(idA,img,content,created_at,status) values (?,?,?,?,?)")
@@ -31,7 +32,7 @@ public class PostService {
                         .bind(1, img)
                         .bind(2, content)
                         .bind(3, created_at)
-                        .bind(4, "1")
+                        .bind(4, "0")
                         .execute()
         );
     }

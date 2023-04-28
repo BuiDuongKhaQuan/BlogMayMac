@@ -126,6 +126,8 @@
 
                     <% Account account = (Account) request.getSession().getAttribute("acc");
                         if (account != null) {%>
+                    <%--  Chức năng đăng bài
+                    2. Chọn vào khung bài đăng.--%>
                     <div class="write-post-container">
                         <div class="user-profile">
                             <img src="images copy/profile-pic.png" alt="">
@@ -134,12 +136,15 @@
                                 </p>
                             </div>
                         </div>
-
+                        <%--    Chức năng đăng bài
+                         3. Nhập nội dung cho bài đăng.--%>
                         <div class="post-upload-textarea">
                                 <textarea name="content" placeholder="Bạn đang nghĩ gì, <%=account.getName()%>?"
                                           id="content" cols="30"
                                           rows="3"></textarea>
-                            <% Map<String, String> myImg = (Map<String, String>) session.getAttribute("img");
+                            <% // Chức năng đăng bài
+                                // 8.lấy đường dẫn từ sesion và hiển thị lên.
+                                Map<String, String> myImg = (Map<String, String>) session.getAttribute("img");
                                 String img = "";
                                 String path = "";
                                 if (myImg != null) {
@@ -153,8 +158,13 @@
                             </div>
                             <%}%>
                             <div class="add-post-links">
+                                <%--    Chức năng đăng bài
+                                4. Chọn vào "Ảnh" để thêm ảnh cho bài đăng.--%>
                                 <a href="javascript:void(0);" onclick="show()"><img src="images copy/photo.png"
                                                                                     alt="">Ảnh</a>
+                                <%--    Chức năng đăng bài
+                                9. Chọn "Đăng bài".
+                                10. Chuyển nội dung, đường dẫn hình, id người dùng.--%>
                                 <a href="javascript:void(0);" onclick="post(<%=account.getId()%>)"><img
                                         src="images copy/upload.png" alt="">Đăng bài</a>
                             </div>
@@ -165,6 +175,8 @@
                                          class="zmdi zmdi-close icon-close"
                                          onclick="closeNew()">
                                     <div class="promotion-content">
+                                        <%--    Chức năng đăng bài
+                                        5. Gọi uploadImg khi người dùng chọn ảnh.--%>
                                         <form action="UploadImg" method="post"
                                               enctype="multipart/form-data">
                                             <input type="file" name="file" size="60" class="dropify"
@@ -178,7 +190,14 @@
                     </div>
                     <%} else {%>
                     <div class="write-post-container">
-                        Bạn hãy đăng nhập để sử dụng chức năng đăng bài! <a href="login.jsp">Đăng nhập</a>
+                        <%--    Chức năng đăng bài.
+                        1.1. Hiển thị thông báo cần đăng nhập để đăng bài.--%>
+                        Bạn hãy đăng nhập để sử dụng chức năng đăng bài!
+                        <%--    Chức năng đăng bài
+                        1.2. Chọn đăng nhập.
+                        1.3. Chuyển đến trang đăng nhập.--%>
+                        <a href="login.jsp">Đăng nhập</a>
+                        <%--1.4. Thực hiện đăng nhập và tiến hàng đăng bài--%>
                     </div>
                     <%}%>
 
@@ -215,17 +234,18 @@
                             </div>
                             <div class="status-field" style="margin-bottom: 20px;">
                                 <a style="text-decoration: none; color: #6a6a6a!important;">
-                                <%--
-                                Usecase comment
-                                2. chuyển đến trang chi tiết bài đăng
-                                --%>
-                                <a href="post-detail.jsp?postId=<%=post.getId()%>" style="text-decoration: none; color: #6a6a6a!important;">
-                                    <p><%=first200Chars%>
-                                        <a href="#"> Xem thêm</a></p>
-                                </a>
-                                <a href="post-detail.jsp?postId=<%=post.getId()%>">
-                                    <img src="<%=post.getImg()%>" alt="Ảnh bài đăng">
-                                </a>
+                                    <%--
+                                    Usecase comment
+                                    2. chuyển đến trang chi tiết bài đăng
+                                    --%>
+                                    <a href="post-detail.jsp?postId=<%=post.getId()%>"
+                                       style="text-decoration: none; color: #6a6a6a!important;">
+                                        <p><%=first200Chars%>
+                                            <a href="#"> Xem thêm</a></p>
+                                    </a>
+                                    <a href="post-detail.jsp?postId=<%=post.getId()%>">
+                                        <img src="<%=post.getImg()%>" alt="Ảnh bài đăng">
+                                    </a>
 
                             </div>
                             <div class="post-reaction">
@@ -269,7 +289,8 @@
                                     </a>
                                 </figure>
                                 <div class="details">
-                                    <h1><a href="post-detail.jsp">Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit</a>
+                                    <h1><a href="post-detail.jsp">Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing
+                                        Elit</a>
                                     </h1>
                                     <p>
                                         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -308,7 +329,8 @@
                                     </a>
                                 </figure>
                                 <div class="padding">
-                                    <h1><a href="post-detail.jsp">Fusce ullamcorper elit at felis cursus suscipit</a></h1>
+                                    <h1><a href="post-detail.jsp">Fusce ullamcorper elit at felis cursus suscipit</a>
+                                    </h1>
                                     <div class="detail">
                                         <div class="category"><a href="post.jsp">Travel</a></div>
                                         <div class="time">December 21, 2016</div>
@@ -627,6 +649,8 @@
         xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
         xhr.onreadystatechange = function () {
             if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+                // Chức năng đăng bài
+                // 14. Hiển thị thông báo đăng bài thành công, chờ duyệt
                 alert("Đăng bài thành công, chờ duyệt!");
                 load();
             }

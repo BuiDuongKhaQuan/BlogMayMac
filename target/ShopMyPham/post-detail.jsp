@@ -803,7 +803,7 @@
                 $("button[type='button'].yes").on("click", function () {
                     console.log(id)
                     $.ajax({
-                        url: "/Forum_war/CommentController",
+                        url: "CommentController",
                         type: "post",
                         data: {
                             id: id,

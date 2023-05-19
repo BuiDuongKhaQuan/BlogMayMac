@@ -19,6 +19,7 @@ public class PostController extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String command = request.getParameter("command");
         if (command.equals("post")) {
+            HttpSession session = request.getSession();
             String img = request.getParameter("img");
             String content = request.getParameter("content");
             String idA = request.getParameter("idA");
@@ -26,6 +27,7 @@ public class PostController extends HttpServlet {
             Date currentDate = new Date();
             String dateNow = dateFormat.format(currentDate);
             PostService.post(idA, img, content, dateNow);
+            session.removeAttribute("img");
         }
         if (command.equals("load")) {
             response.setContentType("application/json");

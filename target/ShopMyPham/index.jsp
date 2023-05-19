@@ -63,8 +63,8 @@
 										<img src="images/news/img04.jpg" alt="Sample Article">
 									</figure>
 									<div class="details">
-										<div class="category"><a href="category.jsp">Computer</a></div>
-										<h1><a href="single.jsp">Phasellus iaculis quam sed est elementum vel ornare ligula venenatis</a></h1>
+										<div class="category"><a href="post.jsp">Computer</a></div>
+										<h1><a href="post-detail.jsp">Phasellus iaculis quam sed est elementum vel ornare ligula venenatis</a></h1>
 										<div class="time">December 26, 2016</div>
 									</div>
 								</article>
@@ -76,8 +76,8 @@
 										<img src="images/news/img14.jpg" alt="Sample Article">
 									</figure>
 									<div class="details">
-										<div class="category"><a href="category.jsp">Travel</a></div>
-										<h1><a href="single.jsp">Class aptent taciti sociosqu ad litora torquent per conubia nostra</a></h1>
+										<div class="category"><a href="post.jsp">Travel</a></div>
+										<h1><a href="post-detail.jsp">Class aptent taciti sociosqu ad litora torquent per conubia nostra</a></h1>
 										<div class="time">December 10, 2016</div>
 									</div>
 								</article>
@@ -89,8 +89,8 @@
 										<img src="images/news/img13.jpg" alt="Sample Article">
 									</figure>
 									<div class="details">
-										<div class="category"><a href="category.jsp">International</a></div>
-										<h1><a href="single.jsp">Maecenas accumsan tortor ut velit pharetra mollis</a></h1>
+										<div class="category"><a href="post.jsp">International</a></div>
+										<h1><a href="post-detail.jsp">Maecenas accumsan tortor ut velit pharetra mollis</a></h1>
 										<div class="time">October 12, 2016</div>
 									</div>
 								</article>
@@ -102,8 +102,8 @@
 										<img src="images/news/img05.jpg" alt="Sample Article">
 									</figure>
 									<div class="details">
-										<div class="category"><a href="category.jsp">Lifestyle</a></div>
-										<h1><a href="single.jsp">Mauris elementum libero at pharetra auctor Fusce ullamcorper elit</a></h1>
+										<div class="category"><a href="post.jsp">Lifestyle</a></div>
+										<h1><a href="post-detail.jsp">Mauris elementum libero at pharetra auctor Fusce ullamcorper elit</a></h1>
 										<div class="time">November 27, 2016</div>
 									</div>
 								</article>
@@ -118,20 +118,20 @@
 									<article class="article col-md-12">
 										<div class="inner">
 											<figure>
-												<a href="single.jsp">
+												<a href="post-detail.jsp">
 													<img src="images/news/img10.jpg" alt="Sample Article">
 												</a>
 											</figure>
 											<div class="padding">
 												<div class="detail">
 													<div class="time">December 10, 2016</div>
-													<div class="category"><a href="category.jsp">Healthy</a></div>
+													<div class="category"><a href="post.jsp">Healthy</a></div>
 												</div>
-												<h2><a href="single.jsp">Duis aute irure dolor in reprehenderit in voluptate</a></h2>
+												<h2><a href="post-detail.jsp">Duis aute irure dolor in reprehenderit in voluptate</a></h2>
 												<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
 												<footer>
 													<a href="#" class="love"><i class="ion-android-favorite-outline"></i> <div>1263</div></a>
-													<a class="btn btn-primary more" href="single.jsp">
+													<a class="btn btn-primary more" href="post-detail.jsp">
 														<div>More</div>
 														<div><i class="ion-ios-arrow-thin-right"></i></div>
 													</a>
@@ -142,20 +142,20 @@
 									<article class="article col-md-12">
 										<div class="inner">
 											<figure>
-												<a href="single.jsp">
+												<a href="post-detail.jsp">
 													<img src="images/news/img06.jpg" alt="Sample Article">
 												</a>
 											</figure>
 											<div class="padding">
 												<div class="detail">
 													<div class="time">December 22, 2016</div>
-													<div class="category"><a href="category.jsp">Healthy</a></div>
+													<div class="category"><a href="post.jsp">Healthy</a></div>
 												</div>
-												<h2><a href="single.jsp">Exercitation ullamco laboris nisi ut aliquip</a></h2>
+												<h2><a href="post-detail.jsp">Exercitation ullamco laboris nisi ut aliquip</a></h2>
 												<p>Maecenas accumsan tortor ut velit pharetra mollis. Proin eu nisl et arcu iaculis placerat sollicitudin ut est. In fringilla dui dui.</p>
 												<footer>
 													<a href="#" class="love"><i class="ion-android-favorite-outline"></i> <div>327</div></a>
-													<a class="btn btn-primary more" href="single.jsp">
+													<a class="btn btn-primary more" href="post-detail.jsp">
 														<div>More</div>
 														<div><i class="ion-ios-arrow-thin-right"></i></div>
 													</a>
@@ -170,20 +170,20 @@
 									<article class="article col-md-12">
 										<div class="inner">
 											<figure>                                
-												<a href="single.jsp">
+												<a href="post-detail.jsp">
 													<img src="images/news/img05.jpg" alt="Sample Article">
 												</a>
 											</figure>
 											<div class="padding">
 												<div class="detail">
 													<div class="time">December 09, 2016</div>
-													<div class="category"><a href="category.jsp">Lifestyle</a></div>
+													<div class="category"><a href="post.jsp">Lifestyle</a></div>
 												</div>
-												<h2><a href="single.jsp">Mauris elementum libero at pharetra auctor</a></h2>
+												<h2><a href="post-detail.jsp">Mauris elementum libero at pharetra auctor</a></h2>
 												<p>Vivamus in efficitur mi. Nullam semper justo ut elit lacinia lacinia. Class aptent taciti sociosqu ad litora torquent per conubia nostra.</p>
 												<footer>
 													<a href="#" class="love"><i class="ion-android-favorite-outline"></i> <div>1083</div></a>
-													<a class="btn btn-primary more" href="single.jsp">
+													<a class="btn btn-primary more" href="post-detail.jsp">
 														<div>More</div>
 														<div><i class="ion-ios-arrow-thin-right"></i></div>
 													</a>
@@ -194,20 +194,20 @@
 									<article class="article col-md-12">
 										<div class="inner">
 											<figure>
-												<a href="single.jsp">
+												<a href="post-detail.jsp">
 													<img src="images/news/img07.jpg" alt="Sample Article">
 												</a>
 											</figure>
 											<div class="padding">
 												<div class="detail">
 													<div class="time">December 21, 2016</div>
-													<div class="category"><a href="category.jsp">Sport</a></div>
+													<div class="category"><a href="post.jsp">Sport</a></div>
 												</div>
-												<h2><a href="single.jsp">Sed do eiusmod tempor incididunt ut labore</a></h2>
+												<h2><a href="post-detail.jsp">Sed do eiusmod tempor incididunt ut labore</a></h2>
 												<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris elementum libero at pharetra auctor.</p>
 												<footer>
 													<a href="#" class="love"><i class="ion-android-favorite-outline"></i> <div>980</div></a>
-													<a class="btn btn-primary more" href="single.jsp">
+													<a class="btn btn-primary more" href="post-detail.jsp">
 														<div>More</div>
 														<div><i class="ion-ios-arrow-thin-right"></i></div>
 													</a>
@@ -258,14 +258,14 @@
 									<article class="article-mini">
 										<div class="inner">
 											<figure>
-												<a href="single.jsp">
+												<a href="post-detail.jsp">
 													<img src="images/news/img09.jpg" alt="Sample Article">
 												</a>
 											</figure>
 											<div class="padding">
-												<h1><a href="single.jsp">Duis aute irure dolor in reprehenderit in voluptate velit</a></h1>
+												<h1><a href="post-detail.jsp">Duis aute irure dolor in reprehenderit in voluptate velit</a></h1>
 												<div class="detail">
-													<div class="category"><a href="category.jsp">Lifestyle</a></div>
+													<div class="category"><a href="post.jsp">Lifestyle</a></div>
 													<div class="time">December 22, 2016</div>
 												</div>
 											</div>
@@ -274,14 +274,14 @@
 									<article class="article-mini">
 										<div class="inner">
 											<figure>
-												<a href="single.jsp">
+												<a href="post-detail.jsp">
 													<img src="images/news/img01.jpg" alt="Sample Article">
 												</a>
 											</figure>
 											<div class="padding">
-												<h1><a href="single.jsp">Duis aute irure dolor in reprehenderit in voluptate velit</a></h1>
+												<h1><a href="post-detail.jsp">Duis aute irure dolor in reprehenderit in voluptate velit</a></h1>
 												<div class="detail">
-													<div class="category"><a href="category.jsp">Lifestyle</a></div>
+													<div class="category"><a href="post.jsp">Lifestyle</a></div>
 													<div class="time">December 22, 2016</div>
 												</div>
 											</div>
@@ -290,14 +290,14 @@
 									<article class="article-mini">
 										<div class="inner">
 											<figure>
-												<a href="single.jsp">
+												<a href="post-detail.jsp">
 													<img src="images/news/img05.jpg" alt="Sample Article">
 												</a>
 											</figure>
 											<div class="padding">
-												<h1><a href="single.jsp">Duis aute irure dolor in reprehenderit in voluptate velit</a></h1>
+												<h1><a href="post-detail.jsp">Duis aute irure dolor in reprehenderit in voluptate velit</a></h1>
 												<div class="detail">
-													<div class="category"><a href="category.jsp">Lifestyle</a></div>
+													<div class="category"><a href="post.jsp">Lifestyle</a></div>
 													<div class="time">December 22, 2016</div>
 												</div>
 											</div>
@@ -306,14 +306,14 @@
 									<article class="article-mini">
 										<div class="inner">
 											<figure>
-												<a href="single.jsp">
+												<a href="post-detail.jsp">
 													<img src="images/news/img02.jpg" alt="Sample Article">
 												</a>
 											</figure>
 											<div class="padding">
-												<h1><a href="single.jsp">Fusce ullamcorper elit at felis cursus suscipit</a></h1>
+												<h1><a href="post-detail.jsp">Fusce ullamcorper elit at felis cursus suscipit</a></h1>
 												<div class="detail">
-													<div class="category"><a href="category.jsp">Travel</a></div>
+													<div class="category"><a href="post.jsp">Travel</a></div>
 													<div class="time">December 21, 2016</div>
 												</div>
 											</div>
@@ -322,14 +322,14 @@
 									<article class="article-mini">
 										<div class="inner">
 											<figure>
-												<a href="single.jsp">
+												<a href="post-detail.jsp">
 													<img src="images/news/img13.jpg" alt="Sample Article">
 												</a>
 											</figure>
 											<div class="padding">
-												<h1><a href="single.jsp">Duis aute irure dolor in reprehenderit in voluptate velit</a></h1>
+												<h1><a href="post-detail.jsp">Duis aute irure dolor in reprehenderit in voluptate velit</a></h1>
 												<div class="detail">
-													<div class="category"><a href="category.jsp">International</a></div>
+													<div class="category"><a href="post.jsp">International</a></div>
 													<div class="time">December 20, 2016</div>
 												</div>
 											</div>
@@ -338,14 +338,14 @@
 									<article class="article-mini">
 										<div class="inner">
 											<figure>
-												<a href="single.jsp">
+												<a href="post-detail.jsp">
 													<img src="images/news/img08.jpg" alt="Sample Article">
 												</a>
 											</figure>
 											<div class="padding">
-												<h1><a href="single.jsp">Aliquam et metus convallis tincidunt velit ut rhoncus dolor</a></h1>
+												<h1><a href="post-detail.jsp">Aliquam et metus convallis tincidunt velit ut rhoncus dolor</a></h1>
 												<div class="detail">
-													<div class="category"><a href="category.jsp">Computer</a></div>
+													<div class="category"><a href="post.jsp">Computer</a></div>
 													<div class="time">December 19, 2016</div>
 												</div>
 											</div>
@@ -361,7 +361,7 @@
 							<article class="col-md-12 article-list">
 								<div class="inner">
 									<figure>
-										<a href="single.jsp">
+										<a href="post-detail.jsp">
 											<img src="images/news/img11.jpg" alt="Sample Article">
 										</a>
 									</figure>
@@ -372,13 +372,13 @@
 											</div>
 											<div class="time">December 19, 2016</div>
 										</div>
-										<h1><a href="single.jsp">Donec consequat arcu at ultrices sodales quam erat aliquet diam</a></h1>
+										<h1><a href="post-detail.jsp">Donec consequat arcu at ultrices sodales quam erat aliquet diam</a></h1>
 										<p>
 										Donec consequat, arcu at ultrices sodales, quam erat aliquet diam, sit amet interdum libero nunc accumsan nisi.
 										</p>
 										<footer>
 											<a href="#" class="love"><i class="ion-android-favorite-outline"></i> <div>273</div></a>
-											<a class="btn btn-primary more" href="single.jsp">
+											<a class="btn btn-primary more" href="post-detail.jsp">
 												<div>More</div>
 												<div><i class="ion-ios-arrow-thin-right"></i></div>
 											</a>
@@ -392,7 +392,7 @@
 										Sponsored
 									</div>
 									<figure>
-										<a href="single.jsp">
+										<a href="post-detail.jsp">
 											<img src="images/news/img02.jpg" alt="Sample Article">
 										</a>
 									</figure>
@@ -403,13 +403,13 @@
 											</div>
 											<div class="time">December 18, 2016</div>
 										</div>
-										<h1><a href="single.jsp">Maecenas accumsan tortor ut velit pharetra mollis</a></h1>
+										<h1><a href="post-detail.jsp">Maecenas accumsan tortor ut velit pharetra mollis</a></h1>
 										<p>
 											Maecenas accumsan tortor ut velit pharetra mollis. Proin eu nisl et arcu iaculis placerat sollicitudin ut est. In fringilla dui.
 										</p>
 										<footer>
 											<a href="#" class="love"><i class="ion-android-favorite-outline"></i> <div>4209</div></a>
-											<a class="btn btn-primary more" href="single.jsp">
+											<a class="btn btn-primary more" href="post-detail.jsp">
 												<div>More</div>
 												<div><i class="ion-ios-arrow-thin-right"></i></div>
 											</a>
@@ -420,7 +420,7 @@
 							<article class="col-md-12 article-list">
 								<div class="inner">
 									<figure>
-										<a href="single.jsp">
+										<a href="post-detail.jsp">
 											<img src="images/news/img03.jpg" alt="Sample Article">
 										</a>
 									</figure>
@@ -431,13 +431,13 @@
 											</div>
 											<div class="time">December 16, 2016</div>
 										</div>
-										<h1><a href="single.jsp">Nulla facilisis odio quis gravida vestibulum Proin venenatis pellentesque arcu</a></h1>
+										<h1><a href="post-detail.jsp">Nulla facilisis odio quis gravida vestibulum Proin venenatis pellentesque arcu</a></h1>
 										<p>
 											Nulla facilisis odio quis gravida vestibulum. Proin venenatis pellentesque arcu, ut mattis nulla placerat et.
 										</p>
 										<footer>
 											<a href="#" class="love active"><i class="ion-android-favorite"></i> <div>302</div></a>
-											<a class="btn btn-primary more" href="single.jsp">
+											<a class="btn btn-primary more" href="post-detail.jsp">
 												<div>More</div>
 												<div><i class="ion-ios-arrow-thin-right"></i></div>
 											</a>
@@ -448,7 +448,7 @@
 							<article class="col-md-12 article-list">
 								<div class="inner">
 									<figure>
-										<a href="single.jsp">
+										<a href="post-detail.jsp">
 											<img src="images/news/img09.jpg" alt="Sample Article">
 										</a>
 									</figure>
@@ -459,13 +459,13 @@
 											</div>
 											<div class="time">December 16, 2016</div>
 										</div>
-										<h1><a href="single.jsp">Maecenas blandit ultricies lorem id tempor enim pulvinar at</a></h1>
+										<h1><a href="post-detail.jsp">Maecenas blandit ultricies lorem id tempor enim pulvinar at</a></h1>
 										<p>
 											Maecenas blandit ultricies lorem, id tempor enim pulvinar at. Curabitur sit amet tortor eu ipsum lacinia malesuada.
 										</p>
 										<footer>
 											<a href="#" class="love"><i class="ion-android-favorite-outline"></i> <div>783</div></a>
-											<a class="btn btn-primary more" href="single.jsp">
+											<a class="btn btn-primary more" href="post-detail.jsp">
 												<div>More</div>
 												<div><i class="ion-ios-arrow-thin-right"></i></div>
 											</a>
@@ -551,72 +551,72 @@
 								<article class="article-mini">
 									<div class="inner">
 										<figure>
-											<a href="single.jsp">
+											<a href="post-detail.jsp">
 												<img src="images/news/img07.jpg" alt="Sample Article">
 											</a>
 										</figure>
 										<div class="padding">
-											<h1><a href="single.jsp">Fusce ullamcorper elit at felis cursus suscipit</a></h1>
+											<h1><a href="post-detail.jsp">Fusce ullamcorper elit at felis cursus suscipit</a></h1>
 										</div>
 									</div>
 								</article>
 								<article class="article-mini">
 									<div class="inner">
 										<figure>
-											<a href="single.jsp">
+											<a href="post-detail.jsp">
 												<img src="images/news/img14.jpg" alt="Sample Article">
 											</a>
 										</figure>
 										<div class="padding">
-											<h1><a href="single.jsp">Duis aute irure dolor in reprehenderit in voluptate velit</a></h1>
+											<h1><a href="post-detail.jsp">Duis aute irure dolor in reprehenderit in voluptate velit</a></h1>
 										</div>
 									</div>
 								</article>
 								<article class="article-mini">
 									<div class="inner">
 										<figure>
-											<a href="single.jsp">
+											<a href="post-detail.jsp">
 												<img src="images/news/img09.jpg" alt="Sample Article">
 											</a>
 										</figure>
 										<div class="padding">
-											<h1><a href="single.jsp">Aliquam et metus convallis tincidunt velit ut rhoncus dolor</a></h1>
+											<h1><a href="post-detail.jsp">Aliquam et metus convallis tincidunt velit ut rhoncus dolor</a></h1>
 										</div>
 									</div>
 								</article>
 								<article class="article-mini">
 									<div class="inner">
 										<figure>
-											<a href="single.jsp">
+											<a href="post-detail.jsp">
 												<img src="images/news/img11.jpg" alt="Sample Article">
 											</a>
 										</figure>
 										<div class="padding">
-											<h1><a href="single.jsp">dui augue facilisis lacus fringilla pulvinar massa felis quis velit</a></h1>
+											<h1><a href="post-detail.jsp">dui augue facilisis lacus fringilla pulvinar massa felis quis velit</a></h1>
 										</div>
 									</div>
 								</article>
 								<article class="article-mini">
 									<div class="inner">
 										<figure>
-											<a href="single.jsp">
+											<a href="post-detail.jsp">
 												<img src="images/news/img06.jpg" alt="Sample Article">
 											</a>
 										</figure>
 										<div class="padding">
-											<h1><a href="single.jsp">neque est semper nulla, ac elementum risus quam a enim</a></h1>
+											<h1><a href="post-detail.jsp">neque est semper nulla, ac elementum risus quam a enim</a></h1>
 										</div>
 									</div>
 								</article>
 								<article class="article-mini">
 									<div class="inner">
 										<figure>
-											<a href="single.jsp">
+											<a href="post-detail.jsp">
 												<img src="images/news/img03.jpg" alt="Sample Article">
 											</a>
 										</figure>
 										<div class="padding">
-											<h1><a href="single.jsp">Morbi vitae nisl ac mi luctus aliquet a vitae libero</a></h1>
+											<h1><a href="post-detail.jsp">Morbi vitae nisl ac mi luctus aliquet a vitae libero</a></h1>
 										</div>
 									</div>
 								</article>
@@ -657,16 +657,16 @@
 									<article class="article-fw">
 										<div class="inner">
 											<figure>
-												<a href="single.jsp">
+												<a href="post-detail.jsp">
 													<img src="images/news/img16.jpg" alt="Sample Article">
 												</a>
 											</figure>
 											<div class="details">
 												<div class="detail">
 													<div class="time">December 31, 2016</div>
-													<div class="category"><a href="category.jsp">Sport</a></div>
+													<div class="category"><a href="post.jsp">Sport</a></div>
 												</div>
-												<h1><a href="single.jsp">Donec congue turpis vitae mauris</a></h1>
+												<h1><a href="post-detail.jsp">Donec congue turpis vitae mauris</a></h1>
 												<p>
 													Donec congue turpis vitae mauris condimentum luctus. Ut dictum neque at egestas convallis. 
 												</p>
@@ -677,14 +677,14 @@
 									<article class="article-mini">
 										<div class="inner">
 											<figure>
-												<a href="single.jsp">
+												<a href="post-detail.jsp">
 													<img src="images/news/img05.jpg" alt="Sample Article">
 												</a>
 											</figure>
 											<div class="padding">
-												<h1><a href="single.jsp">Duis aute irure dolor in reprehenderit in voluptate velit</a></h1>
+												<h1><a href="post-detail.jsp">Duis aute irure dolor in reprehenderit in voluptate velit</a></h1>
 												<div class="detail">
-													<div class="category"><a href="category.jsp">Lifestyle</a></div>
+													<div class="category"><a href="post.jsp">Lifestyle</a></div>
 													<div class="time">December 22, 2016</div>
 												</div>
 											</div>
@@ -693,14 +693,14 @@
 									<article class="article-mini">
 										<div class="inner">
 											<figure>
-												<a href="single.jsp">
+												<a href="post-detail.jsp">
 													<img src="images/news/img02.jpg" alt="Sample Article">
 												</a>
 											</figure>
 											<div class="padding">
-												<h1><a href="single.jsp">Fusce ullamcorper elit at felis cursus suscipit</a></h1>
+												<h1><a href="post-detail.jsp">Fusce ullamcorper elit at felis cursus suscipit</a></h1>
 												<div class="detail">
-													<div class="category"><a href="category.jsp">Travel</a></div>
+													<div class="category"><a href="post.jsp">Travel</a></div>
 													<div class="time">December 21, 2016</div>
 												</div>
 											</div>
@@ -709,14 +709,14 @@
 									<article class="article-mini">
 										<div class="inner">
 											<figure>
-												<a href="single.jsp">
+												<a href="post-detail.jsp">
 													<img src="images/news/img10.jpg" alt="Sample Article">
 												</a>
 											</figure>
 											<div class="padding">
-												<h1><a href="single.jsp">Duis aute irure dolor in reprehenderit in voluptate velit</a></h1>
+												<h1><a href="post-detail.jsp">Duis aute irure dolor in reprehenderit in voluptate velit</a></h1>
 												<div class="detail">
-													<div class="category"><a href="category.jsp">Healthy</a></div>
+													<div class="category"><a href="post.jsp">Healthy</a></div>
 													<div class="time">December 20, 2016</div>
 												</div>
 											</div>
@@ -834,16 +834,16 @@
 					<article class="article">
 						<div class="inner">
 							<figure>
-								<a href="single.jsp">
+								<a href="post-detail.jsp">
 									<img src="images/news/img03.jpg" alt="Sample Article">
 								</a>
 							</figure>
 							<div class="padding">
 								<div class="detail">
 										<div class="time">December 11, 2016</div>
-										<div class="category"><a href="category.jsp">Travel</a></div>
+										<div class="category"><a href="post.jsp">Travel</a></div>
 								</div>
-								<h2><a href="single.jsp">tempor interdum Praesent tincidunt</a></h2>
+								<h2><a href="post-detail.jsp">tempor interdum Praesent tincidunt</a></h2>
 								<p>Praesent tincidunt, leo vitae congue molestie.</p>
 							</div>
 						</div>
@@ -851,16 +851,16 @@
 					<article class="article">
 						<div class="inner">
 							<figure>
-								<a href="single.jsp">
+								<a href="post-detail.jsp">
 									<img src="images/news/img16.jpg" alt="Sample Article">
 								</a>
 							</figure>
 							<div class="padding">
 								<div class="detail">
 									<div class="time">December 09, 2016</div>
-									<div class="category"><a href="category.jsp">Sport</a></div>
+									<div class="category"><a href="post.jsp">Sport</a></div>
 								</div>
-								<h2><a href="single.jsp">Maecenas porttitor sit amet turpis a semper</a></h2>
+								<h2><a href="post-detail.jsp">Maecenas porttitor sit amet turpis a semper</a></h2>
 								<p> Proin vulputate, urna id porttitor luctus, dui augue facilisis lacus.</p>
 							</div>
 						</div>
@@ -868,16 +868,16 @@
 					<article class="article">
 						<div class="inner">
 							<figure>
-								<a href="single.jsp">
+								<a href="post-detail.jsp">
 									<img src="images/news/img15.jpg" alt="Sample Article">
 								</a>
 							</figure>
 							<div class="padding">
 								<div class="detail">
 									<div class="time">December 26, 2016</div>
-									<div class="category"><a href="category.jsp">Lifestyle</a></div>
+									<div class="category"><a href="post.jsp">Lifestyle</a></div>
 								</div>
-								<h2><a href="single.jsp">Fusce ac odio eu ex volutpat pellentesque</a></h2>
+								<h2><a href="post-detail.jsp">Fusce ac odio eu ex volutpat pellentesque</a></h2>
 								<p>Vestibulum ante ipsum primis in faucibus orci luctus</p>
 							</div>
 						</div>
@@ -885,16 +885,16 @@
 					<article class="article">
 						<div class="inner">
 							<figure>
-								<a href="single.jsp">
+								<a href="post-detail.jsp">
 									<img src="images/news/img14.jpg" alt="Sample Article">
 								</a>
 							</figure>
 							<div class="padding">
 								<div class="detail">
 									<div class="time">December 26, 2016</div>
-									<div class="category"><a href="category.jsp">Travel</a></div>
+									<div class="category"><a href="post.jsp">Travel</a></div>
 								</div>
-								<h2><a href="single.jsp">Nulla facilisis odio quis gravida vestibulum</a></h2>
+								<h2><a href="post-detail.jsp">Nulla facilisis odio quis gravida vestibulum</a></h2>
 								<p>Proin venenatis pellentesque arcu, ut mattis nulla placerat et.</p>
 							</div>
 						</div>
@@ -902,16 +902,16 @@
 					<article class="article">
 						<div class="inner">
 							<figure>
-								<a href="single.jsp">
+								<a href="post-detail.jsp">
 									<img src="images/news/img01.jpg" alt="Sample Article">
 								</a>
 							</figure>
 							<div class="padding">
 								<div class="detail">
 									<div class="time">December 26, 2016</div>
-									<div class="category"><a href="category.jsp">Travel</a></div>
+									<div class="category"><a href="post.jsp">Travel</a></div>
 								</div>
-								<h2><a href="single.jsp">Fusce Ullamcorper Elit At Felis Cursus Suscipit</a></h2>
+								<h2><a href="post-detail.jsp">Fusce Ullamcorper Elit At Felis Cursus Suscipit</a></h2>
 								<p>Proin venenatis pellentesque arcu, ut mattis nulla placerat et.</p>
 							</div>
 						</div>
@@ -919,16 +919,16 @@
 					<article class="article">
 						<div class="inner">
 							<figure>
-								<a href="single.jsp">
+								<a href="post-detail.jsp">
 									<img src="images/news/img11.jpg" alt="Sample Article">
 								</a>
 							</figure>
 							<div class="padding">
 								<div class="detail">
 									<div class="time">December 26, 2016</div>
-									<div class="category"><a href="category.jsp">Travel</a></div>
+									<div class="category"><a href="post.jsp">Travel</a></div>
 								</div>
-								<h2><a href="single.jsp">Donec consequat arcu at ultrices sodales</a></h2>
+								<h2><a href="post-detail.jsp">Donec consequat arcu at ultrices sodales</a></h2>
 								<p>Proin venenatis pellentesque arcu, ut mattis nulla placerat et.</p>
 							</div>
 						</div>
@@ -994,48 +994,48 @@
 								<article class="article-mini">
 									<div class="inner">
 										<figure>
-											<a href="single.jsp">
+											<a href="post-detail.jsp">
 												<img src="images/news/img12.jpg" alt="Sample Article">
 											</a>
 										</figure>
 										<div class="padding">
-											<h1><a href="single.jsp">Donec consequat lorem quis augue pharetra</a></h1>
+											<h1><a href="post-detail.jsp">Donec consequat lorem quis augue pharetra</a></h1>
 										</div>
 									</div>
 								</article>
 								<article class="article-mini">
 									<div class="inner">
 										<figure>
-											<a href="single.jsp">
+											<a href="post-detail.jsp">
 												<img src="images/news/img14.jpg" alt="Sample Article">
 											</a>
 										</figure>
 										<div class="padding">
-											<h1><a href="single.jsp">eu dapibus risus aliquam etiam ut venenatis</a></h1>
+											<h1><a href="post-detail.jsp">eu dapibus risus aliquam etiam ut venenatis</a></h1>
 										</div>
 									</div>
 								</article>
 								<article class="article-mini">
 									<div class="inner">
 										<figure>
-											<a href="single.jsp">
+											<a href="post-detail.jsp">
 												<img src="images/news/img15.jpg" alt="Sample Article">
 											</a>
 										</figure>
 										<div class="padding">
-											<h1><a href="single.jsp">Nulla facilisis odio quis gravida vestibulum </a></h1>
+											<h1><a href="post-detail.jsp">Nulla facilisis odio quis gravida vestibulum </a></h1>
 										</div>
 									</div>
 								</article>
 								<article class="article-mini">
 									<div class="inner">
 										<figure>
-											<a href="single.jsp">
+											<a href="post-detail.jsp">
 												<img src="images/news/img16.jpg" alt="Sample Article">
 											</a>
 										</figure>
 										<div class="padding">
-											<h1><a href="single.jsp">Proin venenatis pellentesque arcu vitae </a></h1>
+											<h1><a href="post-detail.jsp">Proin venenatis pellentesque arcu vitae </a></h1>
 										</div>
 									</div>
 								</article>

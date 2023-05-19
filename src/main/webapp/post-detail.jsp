@@ -67,7 +67,8 @@
                                     </a>
                                 </figure>
                                 <div class="details">
-                                    <h1><a href="post-detail.jsp">Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit</a>
+                                    <h1><a href="post-detail.jsp">Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing
+                                        Elit</a>
                                     </h1>
                                     <p>
                                         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -106,7 +107,8 @@
                                     </a>
                                 </figure>
                                 <div class="padding">
-                                    <h1><a href="post-detail.jsp">Fusce ullamcorper elit at felis cursus suscipit</a></h1>
+                                    <h1><a href="post-detail.jsp">Fusce ullamcorper elit at felis cursus suscipit</a>
+                                    </h1>
                                     <div class="detail">
                                         <div class="category"><a href="post.jsp">Travel</a></div>
                                         <div class="time">December 21, 2016</div>
@@ -345,7 +347,6 @@
                                         <%=cmt.getDescription()%>
                                     </div>
                                     <footer id="form-reply">
-<<<<<<< HEAD:src/main/webapp/post-detail.jsp
                                         <div class="media-body">
                                             <ul class="list-unstyled list-inline media-detail pull-right">
                                                 <%if (user.getId() == cmt.getUserId()) {%>
@@ -358,7 +359,7 @@
                                                 <li>
                                                     <%--
                                                     Usecase Comment
-                                                    15. Chọn 1 bình luận và nhấn vào trả lời
+                                                    16. Chọn 1 bình luận và nhấn vào trả lời
                                                     --%>
                                                     <a id="rp-<%=cmt.getId()%>" class="reply">Trả lời</a>
                                                 </li>
@@ -368,7 +369,7 @@
                                                  style="display: none">
                                                 <%--
                                                 Usecase Comment
-                                                17. người dùng nhập nội dung trả lời
+                                                18. người dùng nhập nội dung trả lời
                                                 --%>
                                                 <input type="text" id="desc-reply-<%=cmt.getId()%>"
                                                        class="form-control text    "
@@ -376,7 +377,7 @@
                                                        aria-describedby="button-addon2">
                                                 <%--
                                                 Usecase Comment
-                                                18. Người dung nhấn trả lời
+                                                19. Người dung nhấn trả lời
                                                 --%>
                                                 <div class="input-group-btn">
                                                     <button class="btn btn-primary btn-reply" type="button"
@@ -384,57 +385,6 @@
                                                     </button>
                                                 </div>
                                             </div>
-=======
-                                        <%--                                        <a id="rp-<%=cmt.getId()%>" class="reply">Trả lời</a>--%>
-                                        <%--                                        <a href="#" data-toggle="modal" data-target="#confirm-modal" class="remove"--%>
-                                        <%--                                           id="delete<%=cmt.getId()%>">Xóa</a>--%>
-                                        <%--                                        <div class="input-group mb-3 input-reply-<%=cmt.getId()%>"--%>
-                                        <%--                                             style="display: none">--%>
-                                        <%--                                            <input type="text" id="desc-reply-<%=cmt.getId()%>" class="form-control"--%>
-                                        <%--                                                   placeholder="Viết trả lời..." aria-label="Viết trả lời..."--%>
-                                        <%--                                                   aria-describedby="button-addon2">--%>
-                                        <%--                                            <button class="btn btn-primary btn-reply" type="button"--%>
-                                        <%--                                                    id="reply-<%=cmt.getId()%>">Trả lời--%>
-                                        <%--                                            </button>--%>
-                                        <%--                                        </div>--%>
-
-                                        <%--                                        <a id="rp-<%=cmt.getId()%>" class="reply">Trả lời</a>--%>
-                                        <%--                                        <a href="#" data-toggle="modal" data-target="#confirm-modal" class="remove"--%>
-                                        <%--                                           id="delete<%=cmt.getId()%>">Xóa</a>--%>
-                                        <div class="media-body">
-                                            <ul class="list-unstyled list-inline media-detail pull-right">
-                                                <li class=""><a href="#" data-toggle="modal"
-                                                                data-target="#confirm-modal" class="remove"
-                                                                id="delete<%=cmt.getId()%>">Xóa</a></li>
-                                                <li class=""><a id="rp-<%=cmt.getId()%>" class="reply">Trả lời</a></li>
-                                            </ul>
-                                            <%--                                        <div class="input-group mb-3 input-reply-<%=cmt.getId()%>"--%>
-                                            <%--                                             style="display: none">--%>
-                                            <%--                                            <input type="text" id="desc-reply-<%=cmt.getId()%>" class="form-control"--%>
-                                            <%--                                                   placeholder="Viết trả lời..." aria-label="Viết trả lời..."--%>
-                                            <%--                                                   aria-describedby="button-addon2">--%>
-                                            <%--                                            <button class="btn btn-primary btn-reply" type="button"--%>
-                                            <%--                                                    id="reply-<%=cmt.getId()%>">Trả lời--%>
-                                            <%--                                            </button>--%>
-                                            <%--                                        </div>--%>
-
-                                            <div class="input-group mb-3 input-reply-<%=cmt.getId()%>"
-                                                 style="display: none">
-                                                <input type="text" id="desc-reply-<%=cmt.getId()%>"
-                                                       class="form-control text"
-                                                       placeholder="Viết trả lời..." aria-label="Viết trả lời..."
-                                                       aria-describedby="button-addon2">
-                                                <div class="input-group-btn">
-                                                    <button class="btn btn-primary btn-reply" type="button"
-                                                            id="reply-<%=cmt.getId()%>"> Trả lời
-                                                    </button>
-                                                </div>
-                                            </div>
-
-
->>>>>>> b072d3cd72e4e5f4b4e33fd802badf30fd0bbdae:src/main/webapp/single.jsp
-                                        </div>
-
                                     </footer>
                                 </div>
                             </div>
@@ -458,7 +408,6 @@
                                                 <%=reply.getDescription()%>
                                             </div>
                                             <footer>
-<<<<<<< HEAD:src/main/webapp/post-detail.jsp
                                                 <div class="media-body">
                                                     <ul class="list-unstyled list-inline media-detail pull-right">
                                                         <%if (user.getId() == reply.getUserId()) {%>
@@ -469,19 +418,6 @@
                                                         <% }%>
                                                     </ul>
                                                 </div>
-=======
-                                                <%--                                                <a href="#" data-toggle="modal" data-target="#confirm-modal"--%>
-                                                <%--                                                   id="delete<%=cmt.getId()%>">Xóa</a>--%>
-                                                <div class="media-body">
-                                                    <ul class="list-unstyled list-inline media-detail pull-right">
-                                                        <li class=""><a href="#" data-toggle="modal"
-                                                                        data-target="#confirm-modal"
-                                                                        id="delete<%=cmt.getId()%>">Xóa</a></li>
-                                                        <%--                                                        <li class=""><a id="rp-<%=cmt.getId()%>" class="reply">Trả lời</a></li>--%>
-                                                    </ul>
-                                                </div>
-                                                <%--                                                <a href="#" data-toggle="modal" data-target="#confirm-modal" id="delete<%=cmt.getId()%>">Xóa</a>--%>
->>>>>>> b072d3cd72e4e5f4b4e33fd802badf30fd0bbdae:src/main/webapp/single.jsp
                                             </footer>
                                         </div>
                                     </div>
@@ -760,45 +696,12 @@
 <script src="scripts/toast/jquery.toast.min.js"></script>
 <script src="js/demo.js"></script>
 <script src="js/e-magz.js"></script>
+
 <script>
-<<<<<<< HEAD:src/main/webapp/post-detail.jsp
     /*
-    * Usecase Comment
-    * 16. hiển thị khung trả lời dưới bình luận đó
-    * */
-=======
-    $(document).ready(function () {
-        deletecomment();
-        showreply()
-        reply()
-    })
-
-    function deletecomment() {
-        $(".remove").each(function () {
-            const id = $(this).attr("id").substring(6);
-            $(this).on("click", function (e) {
-                e.preventDefault();
-                $("button[type='button'].yes").on("click", function () {
-                    console.log(id)
-                    $.ajax({
-                        url: "/Forum_war/RemoveCommentController",
-                        type: "post",
-                        data: {
-                            id: id,
-                        },
-                        success: function (data) {
-                            $(".item-" + id).remove();
-                        }
-                    })
-                })
-
-            })
-        })
-    }
-</script>
-<script>
-
->>>>>>> b072d3cd72e4e5f4b4e33fd802badf30fd0bbdae:src/main/webapp/single.jsp
+        Usecase Comment
+        17. Hiển thị khung trả lời dưới bình luận
+        */
     function showreply() {
         $(".reply").click(function () {
                 const id = this.id.substring(3);
@@ -828,16 +731,15 @@
                     postId: postId
                 },
                 success: function (data) {
-                            /*
-                     * Usecase Comment
-                     * 14. hiển thị bình luận lên khung bình luận
-                     * */
+                    /*
+             * Usecase Comment
+             * 15. hiển thị bình luận lên khung bình luận
+             * */
                     $("#comment-list").prepend(data);
                     deletecomment();
                     showreply()
                     reply()
                     document.getElementById('description').value = '';
-
                 }
             })
         }
@@ -847,17 +749,13 @@
     function reply() {
         $(".btn-reply").click(function (e) {
             e.preventDefault();
-                /*
-            Usecase Comment
-            19. Lấy và chuyển dữ liệu trả lời cho CommentController
-            */
+            /*
+        Usecase Comment
+        20. Lấy và chuyển dữ liệu trả lời cho CommentController
+        */
             const parentId = this.id.substring(6);
             const reply = $("#desc-reply-" + parentId).val();
             const postId = $("#postId").val();
-            console.log(parentId)
-            console.log(reply)
-            console.log(postId)
-
             if (reply == "") {
                 alert("Vui lòng nhập trả lời!")
             } else {
@@ -870,13 +768,13 @@
                         postId: postId
                     },
                     success: function (data) {
-                                /*
-                           * Usecase Comment
-                           * 26. hiển thị trả lời lên khung bình luận và dưới bình luận gốc
-                           * */
-                        $(".reply-list-"+parentId).prepend(data);
+                        /*
+                   * Usecase Comment
+                   * 28. hiển thị trả lời lên khung bình luận và dưới bình luận gốc
+                   * */
+                        $(".reply-list-" + parentId).prepend(data);
                         deletecomment();
-                        document.getElementById('desc-reply-'+parentId).value = '';
+                        document.getElementById('desc-reply-' + parentId).value = '';
                         $("#rp-" + parentId).removeAttr("style");
                         $(".input-reply-" + parentId).css("display", "none")
                     }
@@ -909,7 +807,7 @@
                         type: "post",
                         data: {
                             id: id,
-                            delete:"delete"
+                            delete: "delete"
                         },
                         success: function (data) {
                             $(".item-" + id).remove();

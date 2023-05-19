@@ -725,7 +725,7 @@
         } else {
             $.ajax({
                 type: 'post',
-                url: '/Forum_war/CommentController',
+                url: 'CommentController',
                 data: {
                     desc: comment,
                     postId: postId
@@ -761,7 +761,7 @@
             } else {
                 $.ajax({
                     type: 'post',
-                    url: '/Forum_war/CommentController',
+                    url: 'CommentController',
                     data: {
                         parentId: parentId,
                         reply: reply,
@@ -803,7 +803,7 @@
                 $("button[type='button'].yes").on("click", function () {
                     console.log(id)
                     $.ajax({
-                        url: "/Forum_war/CommentController",
+                        url: "CommentController",
                         type: "post",
                         data: {
                             id: id,

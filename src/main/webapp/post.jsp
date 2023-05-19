@@ -109,18 +109,6 @@
     <div class="container">
         <div class="row">
             <div class="col-md-8 text-left">
-                <div class="row">
-                    <div class="col-md-12">
-                        <ol class="breadcrumb">
-                            <li><a href="#">Home</a></li>
-                            <li class="active">Computer</li>
-                        </ol>
-                        <h1 class="page-title">Category: Computer</h1>
-                        <p class="page-subtitle">Showing all posts with category <i>Computer</i></p>
-                    </div>
-                </div>
-                <div class="line"></div>
-
                 <!--  -->
                 <div class="content-area">
 

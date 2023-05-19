@@ -29,26 +29,28 @@ public class CommentController extends HttpServlet {
         if (delete != null) {
             String id = request.getParameter("id");
             new CommentService().RemoveCmt(Integer.parseInt(id));
-        } else if (parentId != null) {
+        }
+        /*Xử lý trả lời bình luận*/
+        else if (parentId != null) {
             /*
              * Usecase Comment
-             * 20. lấy và xử lý dữ liệu
+             * 21. lấy và xử lý dữ liệu
              * */
             String replyDesc = request.getParameter("reply");
             /*
              * Usecase Comment
-             * 21. Chuyển dữ liệu cho CommentService
+             * 22. Chuyển dữ liệu cho CommentService
              * */
             int id = new CommentService().insertReply(user.getId(), postId, replyDesc, Integer.parseInt(parentId));
             /*
              * Usecase Comment
-             * 24.Controller lấy nội dung trả lời
+             * 26.Controller lấy nội dung trả lời
              * */
             Comment reply = new CommentService().getCmtById(id);
             Account userReply = AccountService.getAccountById(reply.getUserId());
             /*
              * Usecase Comment
-             * 25. chuyển nội dung trả lời cho post-detail.jsp
+             * 27. chuyển nội dung trả lời cho post-detail.jsp
              * */
             PrintWriter writer = response.getWriter();
             String s = "<div class=\"item item-" + reply.getId() + "\">\n" +
@@ -84,7 +86,9 @@ public class CommentController extends HttpServlet {
             response.setCharacterEncoding("UTF-8");
             response.setContentType("application/html");
             writer.write(s);
-        } else {
+        }
+        /*xử lý bình luận*/
+        else {
             /*
              * Usecase Comment
              * 8. lấy và xử lý dữ liệu
@@ -97,13 +101,13 @@ public class CommentController extends HttpServlet {
             int id = new CommentService().insertCmt(user.getId(), postId, desc);
             /*
              * Usecase Comment
-             * 12.Controller lấy nội dung bình luận
+             * 13.Controller lấy nội dung bình luận
              * */
             Comment cmt = new CommentService().getCmtById(id);
             Account userCmt = AccountService.getAccountById(cmt.getUserId());
             /*
              * Usecase Comment
-             * 13. chuyển nội dung bình luận cho post-detail.jsp
+             * 14. chuyển nội dung bình luận cho post-detail.jsp
              * */
             PrintWriter writer = response.getWriter();
             String s = "<div class=\"item item-" + cmt.getId() + "\">\n" +

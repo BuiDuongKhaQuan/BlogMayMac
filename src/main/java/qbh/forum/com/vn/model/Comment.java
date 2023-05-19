@@ -1,7 +1,7 @@
 package qbh.forum.com.vn.model;
 
 import java.io.Serializable;
-
+/*Đây là model comment*/
 public class Comment implements Serializable {
     private int id;
     private int userId;

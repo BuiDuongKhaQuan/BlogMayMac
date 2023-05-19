@@ -59,7 +59,7 @@ public class CommentService {
     }
     /*
      * Usecase Comment
-     * 22. lưu trả lời vào database
+     * 23. lưu trả lời vào database
      * */
     public int insertReply(int userId, String postId, String reply, int parentId){
         String id = createIdComment();
@@ -88,15 +88,21 @@ public class CommentService {
     }
 
 
-    /*
-    * Usecase Comment
-    * 11. lấy nội dung bình luận
-    * 23. lấy nội dung trả lời
-    * */
+
     public Comment getCmtById(int cmtId){
+        /*
+         * Usecase Comment
+         * 11. lấy nội dung bình luận
+         * 24. lấy nội dung trả lời
+         * */
         Comment cmt = JDBiConnector.me().withHandle(handle -> {
             return handle.createQuery("select * from comment where id = ?")
                     .bind(0,cmtId)
+                    /*
+                     * Usecase Comment
+                     * 12. chuyển nội dung nhận được về dạng Comment
+                     * 25. chuyển nội dung nhận được về dạng Comment
+                     * */
                     .mapToBean(Comment.class).first();
         });
         return cmt;

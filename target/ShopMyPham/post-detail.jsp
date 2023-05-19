@@ -67,7 +67,8 @@
                                     </a>
                                 </figure>
                                 <div class="details">
-                                    <h1><a href="post-detail.jsp">Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit</a>
+                                    <h1><a href="post-detail.jsp">Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing
+                                        Elit</a>
                                     </h1>
                                     <p>
                                         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -106,7 +107,8 @@
                                     </a>
                                 </figure>
                                 <div class="padding">
-                                    <h1><a href="post-detail.jsp">Fusce ullamcorper elit at felis cursus suscipit</a></h1>
+                                    <h1><a href="post-detail.jsp">Fusce ullamcorper elit at felis cursus suscipit</a>
+                                    </h1>
                                     <div class="detail">
                                         <div class="category"><a href="post.jsp">Travel</a></div>
                                         <div class="time">December 21, 2016</div>
@@ -357,7 +359,7 @@
                                                 <li>
                                                     <%--
                                                     Usecase Comment
-                                                    15. Chọn 1 bình luận và nhấn vào trả lời
+                                                    16. Chọn 1 bình luận và nhấn vào trả lời
                                                     --%>
                                                     <a id="rp-<%=cmt.getId()%>" class="reply">Trả lời</a>
                                                 </li>
@@ -367,7 +369,7 @@
                                                  style="display: none">
                                                 <%--
                                                 Usecase Comment
-                                                17. người dùng nhập nội dung trả lời
+                                                18. người dùng nhập nội dung trả lời
                                                 --%>
                                                 <input type="text" id="desc-reply-<%=cmt.getId()%>"
                                                        class="form-control text    "
@@ -375,7 +377,7 @@
                                                        aria-describedby="button-addon2">
                                                 <%--
                                                 Usecase Comment
-                                                18. Người dung nhấn trả lời
+                                                19. Người dung nhấn trả lời
                                                 --%>
                                                 <div class="input-group-btn">
                                                     <button class="btn btn-primary btn-reply" type="button"
@@ -383,7 +385,6 @@
                                                     </button>
                                                 </div>
                                             </div>
-                                        </div>
                                     </footer>
                                 </div>
                             </div>
@@ -695,11 +696,12 @@
 <script src="scripts/toast/jquery.toast.min.js"></script>
 <script src="js/demo.js"></script>
 <script src="js/e-magz.js"></script>
+
 <script>
     /*
-    * Usecase Comment
-    * 16. hiển thị khung trả lời dưới bình luận đó
-    * */
+        Usecase Comment
+        17. Hiển thị khung trả lời dưới bình luận
+        */
     function showreply() {
         $(".reply").click(function () {
                 const id = this.id.substring(3);
@@ -729,16 +731,15 @@
                     postId: postId
                 },
                 success: function (data) {
-                            /*
-                     * Usecase Comment
-                     * 14. hiển thị bình luận lên khung bình luận
-                     * */
+                    /*
+             * Usecase Comment
+             * 15. hiển thị bình luận lên khung bình luận
+             * */
                     $("#comment-list").prepend(data);
                     deletecomment();
                     showreply()
                     reply()
                     document.getElementById('description').value = '';
-
                 }
             })
         }
@@ -748,17 +749,13 @@
     function reply() {
         $(".btn-reply").click(function (e) {
             e.preventDefault();
-                /*
-            Usecase Comment
-            19. Lấy và chuyển dữ liệu trả lời cho CommentController
-            */
+            /*
+        Usecase Comment
+        20. Lấy và chuyển dữ liệu trả lời cho CommentController
+        */
             const parentId = this.id.substring(6);
             const reply = $("#desc-reply-" + parentId).val();
             const postId = $("#postId").val();
-            console.log(parentId)
-            console.log(reply)
-            console.log(postId)
-
             if (reply == "") {
                 alert("Vui lòng nhập trả lời!")
             } else {
@@ -771,13 +768,13 @@
                         postId: postId
                     },
                     success: function (data) {
-                                /*
-                           * Usecase Comment
-                           * 26. hiển thị trả lời lên khung bình luận và dưới bình luận gốc
-                           * */
-                        $(".reply-list-"+parentId).prepend(data);
+                        /*
+                   * Usecase Comment
+                   * 28. hiển thị trả lời lên khung bình luận và dưới bình luận gốc
+                   * */
+                        $(".reply-list-" + parentId).prepend(data);
                         deletecomment();
-                        document.getElementById('desc-reply-'+parentId).value = '';
+                        document.getElementById('desc-reply-' + parentId).value = '';
                         $("#rp-" + parentId).removeAttr("style");
                         $(".input-reply-" + parentId).css("display", "none")
                     }
@@ -810,7 +807,7 @@
                         type: "post",
                         data: {
                             id: id,
-                            delete:"delete"
+                            delete: "delete"
                         },
                         success: function (data) {
                             $(".item-" + id).remove();

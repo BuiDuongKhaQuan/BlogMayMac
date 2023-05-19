@@ -77,7 +77,7 @@
                     <li class="for-tablet nav-title"><a>Menu</a></li>
                     <li class="for-tablet"><a href="login.jsp">Đăng nhập</a></li>
                     <li class="for-tablet"><a href="register.jsp">Đăng ký</a></li>
-                    <li><a href="category.jsp">Bài đăng</a></li>
+                    <li><a href="post.jsp">Bài đăng</a></li>
                     <li><a href="page.jsp">Về chúng tôi</a></li>
                     <li><a href="search.jsp">Bài viết <i class="ion-ios-arrow-right"></i>
                         <div class="badge">Hot</div>
@@ -114,17 +114,17 @@
                                             <article class="article col-md-4 mini">
                                                 <div class="inner">
                                                     <figure>
-                                                        <a href="single.jsp">
+                                                        <a href="post-detail.jsp">
                                                             <img src="images/news/img10.jpg" alt="Sample Article">
                                                         </a>
                                                     </figure>
                                                     <div class="padding">
                                                         <div class="detail">
                                                             <div class="time">December 10, 2016</div>
-                                                            <div class="category"><a href="category.jsp">Healthy</a>
+                                                            <div class="category"><a href="post.jsp">Healthy</a>
                                                             </div>
                                                         </div>
-                                                        <h2><a href="single.jsp">Duis aute irure dolor in reprehenderit
+                                                        <h2><a href="post-detail.jsp">Duis aute irure dolor in reprehenderit
                                                             in voluptate</a></h2>
                                                     </div>
                                                 </div>
@@ -132,17 +132,17 @@
                                             <article class="article col-md-4 mini">
                                                 <div class="inner">
                                                     <figure>
-                                                        <a href="single.jsp">
+                                                        <a href="post-detail.jsp">
                                                             <img src="images/news/img11.jpg" alt="Sample Article">
                                                         </a>
                                                     </figure>
                                                     <div class="padding">
                                                         <div class="detail">
                                                             <div class="time">December 13, 2016</div>
-                                                            <div class="category"><a href="category.jsp">Lifestyle</a>
+                                                            <div class="category"><a href="post.jsp">Lifestyle</a>
                                                             </div>
                                                         </div>
-                                                        <h2><a href="single.jsp">Duis aute irure dolor in reprehenderit
+                                                        <h2><a href="post-detail.jsp">Duis aute irure dolor in reprehenderit
                                                             in voluptate</a></h2>
                                                     </div>
                                                 </div>
@@ -150,17 +150,17 @@
                                             <article class="article col-md-4 mini">
                                                 <div class="inner">
                                                     <figure>
-                                                        <a href="single.jsp">
+                                                        <a href="post-detail.jsp">
                                                             <img src="images/news/img14.jpg" alt="Sample Article">
                                                         </a>
                                                     </figure>
                                                     <div class="padding">
                                                         <div class="detail">
                                                             <div class="time">December 14, 2016</div>
-                                                            <div class="category"><a href="category.jsp">Travel</a>
+                                                            <div class="category"><a href="post.jsp">Travel</a>
                                                             </div>
                                                         </div>
-                                                        <h2><a href="single.jsp">Duis aute irure dolor in reprehenderit
+                                                        <h2><a href="post-detail.jsp">Duis aute irure dolor in reprehenderit
                                                             in voluptate</a></h2>
                                                     </div>
                                                 </div>
